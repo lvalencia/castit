@@ -19,6 +19,25 @@
 		B609801E18E28E0400E4FAC5 /* UIKit.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = B609800618E28E0400E4FAC5 /* UIKit.framework */; };
 		B609802618E28E0400E4FAC5 /* InfoPlist.strings in Resources */ = {isa = PBXBuildFile; fileRef = B609802418E28E0400E4FAC5 /* InfoPlist.strings */; };
 		B609802818E28E0400E4FAC5 /* CastItTests.m in Sources */ = {isa = PBXBuildFile; fileRef = B609802718E28E0400E4FAC5 /* CastItTests.m */; };
+		B67605BA18E2967D005637B2 /* iPhoneMain.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = B67605B918E2967D005637B2 /* iPhoneMain.storyboard */; };
+		B67605BE18E296F6005637B2 /* iPadMain.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = B67605BD18E296F6005637B2 /* iPadMain.storyboard */; };
+		B67605C918E29AE8005637B2 /* CIViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = B67605C818E29AE8005637B2 /* CIViewController.m */; };
+		B67605CC18E29B0E005637B2 /* CIHomeViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = B67605CB18E29B0E005637B2 /* CIHomeViewController.m */; };
+		B67605D318E29E35005637B2 /* CIView.m in Sources */ = {isa = PBXBuildFile; fileRef = B67605D218E29E35005637B2 /* CIView.m */; };
+		B67605D618E29E49005637B2 /* CIHomeView.m in Sources */ = {isa = PBXBuildFile; fileRef = B67605D518E29E49005637B2 /* CIHomeView.m */; };
+		B67605DA18E29EF3005637B2 /* UIColor+Conversion.m in Sources */ = {isa = PBXBuildFile; fileRef = B67605D918E29EF3005637B2 /* UIColor+Conversion.m */; };
+		B67605DD18E29FB5005637B2 /* UIColor+Palette.m in Sources */ = {isa = PBXBuildFile; fileRef = B67605DC18E29FB5005637B2 /* UIColor+Palette.m */; };
+		B67605E318E2A5A3005637B2 /* UIFont+Typeface.m in Sources */ = {isa = PBXBuildFile; fileRef = B67605E218E2A5A3005637B2 /* UIFont+Typeface.m */; };
+		B67605EF18E2A5BB005637B2 /* OpenSans-Bold.ttf in Resources */ = {isa = PBXBuildFile; fileRef = B67605E518E2A5BB005637B2 /* OpenSans-Bold.ttf */; };
+		B67605F018E2A5BB005637B2 /* OpenSans-BoldItalic.ttf in Resources */ = {isa = PBXBuildFile; fileRef = B67605E618E2A5BB005637B2 /* OpenSans-BoldItalic.ttf */; };
+		B67605F118E2A5BB005637B2 /* OpenSans-ExtraBold.ttf in Resources */ = {isa = PBXBuildFile; fileRef = B67605E718E2A5BB005637B2 /* OpenSans-ExtraBold.ttf */; };
+		B67605F218E2A5BB005637B2 /* OpenSans-ExtraBoldItalic.ttf in Resources */ = {isa = PBXBuildFile; fileRef = B67605E818E2A5BB005637B2 /* OpenSans-ExtraBoldItalic.ttf */; };
+		B67605F318E2A5BB005637B2 /* OpenSans-Italic.ttf in Resources */ = {isa = PBXBuildFile; fileRef = B67605E918E2A5BB005637B2 /* OpenSans-Italic.ttf */; };
+		B67605F418E2A5BB005637B2 /* OpenSans-Light.ttf in Resources */ = {isa = PBXBuildFile; fileRef = B67605EA18E2A5BB005637B2 /* OpenSans-Light.ttf */; };
+		B67605F518E2A5BB005637B2 /* OpenSans-LightItalic.ttf in Resources */ = {isa = PBXBuildFile; fileRef = B67605EB18E2A5BB005637B2 /* OpenSans-LightItalic.ttf */; };
+		B67605F618E2A5BB005637B2 /* OpenSans-Regular.ttf in Resources */ = {isa = PBXBuildFile; fileRef = B67605EC18E2A5BB005637B2 /* OpenSans-Regular.ttf */; };
+		B67605F718E2A5BB005637B2 /* OpenSans-Semibold.ttf in Resources */ = {isa = PBXBuildFile; fileRef = B67605ED18E2A5BB005637B2 /* OpenSans-Semibold.ttf */; };
+		B67605F818E2A5BB005637B2 /* OpenSans-SemiboldItalic.ttf in Resources */ = {isa = PBXBuildFile; fileRef = B67605EE18E2A5BB005637B2 /* OpenSans-SemiboldItalic.ttf */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXContainerItemProxy section */
@@ -48,6 +67,33 @@
 		B609802318E28E0400E4FAC5 /* CastItTests-Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = "CastItTests-Info.plist"; sourceTree = "<group>"; };
 		B609802518E28E0400E4FAC5 /* en */ = {isa = PBXFileReference; lastKnownFileType = text.plist.strings; name = en; path = en.lproj/InfoPlist.strings; sourceTree = "<group>"; };
 		B609802718E28E0400E4FAC5 /* CastItTests.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = CastItTests.m; sourceTree = "<group>"; };
+		B67605B918E2967D005637B2 /* iPhoneMain.storyboard */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = file.storyboard; path = iPhoneMain.storyboard; sourceTree = "<group>"; };
+		B67605BD18E296F6005637B2 /* iPadMain.storyboard */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = file.storyboard; path = iPadMain.storyboard; sourceTree = "<group>"; };
+		B67605C718E29AE8005637B2 /* CIViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = CIViewController.h; sourceTree = "<group>"; };
+		B67605C818E29AE8005637B2 /* CIViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = CIViewController.m; sourceTree = "<group>"; };
+		B67605CA18E29B0E005637B2 /* CIHomeViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = CIHomeViewController.h; sourceTree = "<group>"; };
+		B67605CB18E29B0E005637B2 /* CIHomeViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = CIHomeViewController.m; sourceTree = "<group>"; };
+		B67605D118E29E35005637B2 /* CIView.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = CIView.h; sourceTree = "<group>"; };
+		B67605D218E29E35005637B2 /* CIView.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = CIView.m; sourceTree = "<group>"; };
+		B67605D418E29E49005637B2 /* CIHomeView.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = CIHomeView.h; sourceTree = "<group>"; };
+		B67605D518E29E49005637B2 /* CIHomeView.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = CIHomeView.m; sourceTree = "<group>"; };
+		B67605D818E29EF3005637B2 /* UIColor+Conversion.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = "UIColor+Conversion.h"; sourceTree = "<group>"; };
+		B67605D918E29EF3005637B2 /* UIColor+Conversion.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = "UIColor+Conversion.m"; sourceTree = "<group>"; };
+		B67605DB18E29FB5005637B2 /* UIColor+Palette.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = "UIColor+Palette.h"; sourceTree = "<group>"; };
+		B67605DC18E29FB5005637B2 /* UIColor+Palette.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = "UIColor+Palette.m"; sourceTree = "<group>"; };
+		B67605E018E2A0F0005637B2 /* CIStyleable.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = CIStyleable.h; sourceTree = "<group>"; };
+		B67605E118E2A5A3005637B2 /* UIFont+Typeface.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = "UIFont+Typeface.h"; sourceTree = "<group>"; };
+		B67605E218E2A5A3005637B2 /* UIFont+Typeface.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = "UIFont+Typeface.m"; sourceTree = "<group>"; };
+		B67605E518E2A5BB005637B2 /* OpenSans-Bold.ttf */ = {isa = PBXFileReference; lastKnownFileType = file; path = "OpenSans-Bold.ttf"; sourceTree = "<group>"; };
+		B67605E618E2A5BB005637B2 /* OpenSans-BoldItalic.ttf */ = {isa = PBXFileReference; lastKnownFileType = file; path = "OpenSans-BoldItalic.ttf"; sourceTree = "<group>"; };
+		B67605E718E2A5BB005637B2 /* OpenSans-ExtraBold.ttf */ = {isa = PBXFileReference; lastKnownFileType = file; path = "OpenSans-ExtraBold.ttf"; sourceTree = "<group>"; };
+		B67605E818E2A5BB005637B2 /* OpenSans-ExtraBoldItalic.ttf */ = {isa = PBXFileReference; lastKnownFileType = file; path = "OpenSans-ExtraBoldItalic.ttf"; sourceTree = "<group>"; };
+		B67605E918E2A5BB005637B2 /* OpenSans-Italic.ttf */ = {isa = PBXFileReference; lastKnownFileType = file; path = "OpenSans-Italic.ttf"; sourceTree = "<group>"; };
+		B67605EA18E2A5BB005637B2 /* OpenSans-Light.ttf */ = {isa = PBXFileReference; lastKnownFileType = file; path = "OpenSans-Light.ttf"; sourceTree = "<group>"; };
+		B67605EB18E2A5BB005637B2 /* OpenSans-LightItalic.ttf */ = {isa = PBXFileReference; lastKnownFileType = file; path = "OpenSans-LightItalic.ttf"; sourceTree = "<group>"; };
+		B67605EC18E2A5BB005637B2 /* OpenSans-Regular.ttf */ = {isa = PBXFileReference; lastKnownFileType = file; path = "OpenSans-Regular.ttf"; sourceTree = "<group>"; };
+		B67605ED18E2A5BB005637B2 /* OpenSans-Semibold.ttf */ = {isa = PBXFileReference; lastKnownFileType = file; path = "OpenSans-Semibold.ttf"; sourceTree = "<group>"; };
+		B67605EE18E2A5BB005637B2 /* OpenSans-SemiboldItalic.ttf */ = {isa = PBXFileReference; lastKnownFileType = file; path = "OpenSans-SemiboldItalic.ttf"; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -107,6 +153,11 @@
 		B609800818E28E0400E4FAC5 /* CastIt */ = {
 			isa = PBXGroup;
 			children = (
+				B67605DE18E2A03D005637B2 /* Protocols */,
+				B67605D018E29E1E005637B2 /* Views */,
+				B67605C318E29AA7005637B2 /* Controllers */,
+				B67605D718E29EA0005637B2 /* Categories */,
+				B67605BB18E296A4005637B2 /* Resources */,
 				B609801118E28E0400E4FAC5 /* AppDelegate.h */,
 				B609801218E28E0400E4FAC5 /* AppDelegate.m */,
 				B609801418E28E0400E4FAC5 /* Images.xcassets */,
@@ -142,6 +193,84 @@
 				B609802418E28E0400E4FAC5 /* InfoPlist.strings */,
 			);
 			name = "Supporting Files";
+			sourceTree = "<group>";
+		};
+		B67605BB18E296A4005637B2 /* Resources */ = {
+			isa = PBXGroup;
+			children = (
+				B67605E418E2A5A8005637B2 /* Font */,
+				B67605BC18E296BD005637B2 /* Storyboards */,
+			);
+			name = Resources;
+			sourceTree = "<group>";
+		};
+		B67605BC18E296BD005637B2 /* Storyboards */ = {
+			isa = PBXGroup;
+			children = (
+				B67605B918E2967D005637B2 /* iPhoneMain.storyboard */,
+				B67605BD18E296F6005637B2 /* iPadMain.storyboard */,
+			);
+			name = Storyboards;
+			sourceTree = "<group>";
+		};
+		B67605C318E29AA7005637B2 /* Controllers */ = {
+			isa = PBXGroup;
+			children = (
+				B67605C718E29AE8005637B2 /* CIViewController.h */,
+				B67605C818E29AE8005637B2 /* CIViewController.m */,
+				B67605CA18E29B0E005637B2 /* CIHomeViewController.h */,
+				B67605CB18E29B0E005637B2 /* CIHomeViewController.m */,
+			);
+			name = Controllers;
+			sourceTree = "<group>";
+		};
+		B67605D018E29E1E005637B2 /* Views */ = {
+			isa = PBXGroup;
+			children = (
+				B67605D118E29E35005637B2 /* CIView.h */,
+				B67605D218E29E35005637B2 /* CIView.m */,
+				B67605D418E29E49005637B2 /* CIHomeView.h */,
+				B67605D518E29E49005637B2 /* CIHomeView.m */,
+			);
+			name = Views;
+			sourceTree = "<group>";
+		};
+		B67605D718E29EA0005637B2 /* Categories */ = {
+			isa = PBXGroup;
+			children = (
+				B67605D818E29EF3005637B2 /* UIColor+Conversion.h */,
+				B67605D918E29EF3005637B2 /* UIColor+Conversion.m */,
+				B67605DB18E29FB5005637B2 /* UIColor+Palette.h */,
+				B67605DC18E29FB5005637B2 /* UIColor+Palette.m */,
+				B67605E118E2A5A3005637B2 /* UIFont+Typeface.h */,
+				B67605E218E2A5A3005637B2 /* UIFont+Typeface.m */,
+			);
+			name = Categories;
+			sourceTree = "<group>";
+		};
+		B67605DE18E2A03D005637B2 /* Protocols */ = {
+			isa = PBXGroup;
+			children = (
+				B67605E018E2A0F0005637B2 /* CIStyleable.h */,
+			);
+			name = Protocols;
+			sourceTree = "<group>";
+		};
+		B67605E418E2A5A8005637B2 /* Font */ = {
+			isa = PBXGroup;
+			children = (
+				B67605E518E2A5BB005637B2 /* OpenSans-Bold.ttf */,
+				B67605E618E2A5BB005637B2 /* OpenSans-BoldItalic.ttf */,
+				B67605E718E2A5BB005637B2 /* OpenSans-ExtraBold.ttf */,
+				B67605E818E2A5BB005637B2 /* OpenSans-ExtraBoldItalic.ttf */,
+				B67605E918E2A5BB005637B2 /* OpenSans-Italic.ttf */,
+				B67605EA18E2A5BB005637B2 /* OpenSans-Light.ttf */,
+				B67605EB18E2A5BB005637B2 /* OpenSans-LightItalic.ttf */,
+				B67605EC18E2A5BB005637B2 /* OpenSans-Regular.ttf */,
+				B67605ED18E2A5BB005637B2 /* OpenSans-Semibold.ttf */,
+				B67605EE18E2A5BB005637B2 /* OpenSans-SemiboldItalic.ttf */,
+			);
+			name = Font;
 			sourceTree = "<group>";
 		};
 /* End PBXGroup section */
@@ -219,8 +348,20 @@
 			isa = PBXResourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				B67605F318E2A5BB005637B2 /* OpenSans-Italic.ttf in Resources */,
+				B67605F018E2A5BB005637B2 /* OpenSans-BoldItalic.ttf in Resources */,
 				B609800D18E28E0400E4FAC5 /* InfoPlist.strings in Resources */,
+				B67605F718E2A5BB005637B2 /* OpenSans-Semibold.ttf in Resources */,
+				B67605F118E2A5BB005637B2 /* OpenSans-ExtraBold.ttf in Resources */,
+				B67605BE18E296F6005637B2 /* iPadMain.storyboard in Resources */,
+				B67605F518E2A5BB005637B2 /* OpenSans-LightItalic.ttf in Resources */,
 				B609801518E28E0400E4FAC5 /* Images.xcassets in Resources */,
+				B67605EF18E2A5BB005637B2 /* OpenSans-Bold.ttf in Resources */,
+				B67605BA18E2967D005637B2 /* iPhoneMain.storyboard in Resources */,
+				B67605F818E2A5BB005637B2 /* OpenSans-SemiboldItalic.ttf in Resources */,
+				B67605F418E2A5BB005637B2 /* OpenSans-Light.ttf in Resources */,
+				B67605F618E2A5BB005637B2 /* OpenSans-Regular.ttf in Resources */,
+				B67605F218E2A5BB005637B2 /* OpenSans-ExtraBoldItalic.ttf in Resources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -239,8 +380,15 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				B67605DA18E29EF3005637B2 /* UIColor+Conversion.m in Sources */,
+				B67605E318E2A5A3005637B2 /* UIFont+Typeface.m in Sources */,
 				B609801318E28E0400E4FAC5 /* AppDelegate.m in Sources */,
+				B67605CC18E29B0E005637B2 /* CIHomeViewController.m in Sources */,
+				B67605DD18E29FB5005637B2 /* UIColor+Palette.m in Sources */,
 				B609800F18E28E0400E4FAC5 /* main.m in Sources */,
+				B67605C918E29AE8005637B2 /* CIViewController.m in Sources */,
+				B67605D318E29E35005637B2 /* CIView.m in Sources */,
+				B67605D618E29E49005637B2 /* CIHomeView.m in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -362,7 +510,9 @@
 				GCC_PRECOMPILE_PREFIX_HEADER = YES;
 				GCC_PREFIX_HEADER = "CastIt/CastIt-Prefix.pch";
 				INFOPLIST_FILE = "CastIt/CastIt-Info.plist";
+				IPHONEOS_DEPLOYMENT_TARGET = 7.1;
 				PRODUCT_NAME = "$(TARGET_NAME)";
+				TARGETED_DEVICE_FAMILY = "1,2";
 				WRAPPER_EXTENSION = app;
 			};
 			name = Debug;
@@ -375,7 +525,9 @@
 				GCC_PRECOMPILE_PREFIX_HEADER = YES;
 				GCC_PREFIX_HEADER = "CastIt/CastIt-Prefix.pch";
 				INFOPLIST_FILE = "CastIt/CastIt-Info.plist";
+				IPHONEOS_DEPLOYMENT_TARGET = 7.1;
 				PRODUCT_NAME = "$(TARGET_NAME)";
+				TARGETED_DEVICE_FAMILY = "1,2";
 				WRAPPER_EXTENSION = app;
 			};
 			name = Release;
@@ -439,6 +591,7 @@
 				B609802D18E28E0400E4FAC5 /* Release */,
 			);
 			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
 		};
 		B609802E18E28E0400E4FAC5 /* Build configuration list for PBXNativeTarget "CastItTests" */ = {
 			isa = XCConfigurationList;
@@ -447,6 +600,7 @@
 				B609803018E28E0400E4FAC5 /* Release */,
 			);
 			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
 		};
 /* End XCConfigurationList section */
 	};
