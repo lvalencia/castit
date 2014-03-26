@@ -7,6 +7,9 @@
 //
 
 #import <Foundation/Foundation.h>
+#import "UIColor+Palette.h"
+#import "NSString+Copy.h"
+#import "UIFont+Typeface.h"
 
 @protocol CIStyleable <NSObject>
 

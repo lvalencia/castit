@@ -10,4 +10,6 @@
 
 @interface UIFont (Typeface)
 
++ (UIFont *) headerSectionTypeface;
+
 @end

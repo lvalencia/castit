@@ -19,4 +19,7 @@
 + (UIColor *) contentSectionTextColor               { return [UIColor colorFromHexValue:0x6e674f]; }
 + (UIColor *) contentSectionHighlightedTextColor    { return [UIColor colorFromHexValue:0xc43751]; }
 
++ (UIColor *) buttonTextColor   { return [UIColor colorFromHexValue:0xffffff]; }
++ (UIColor *) standardLabelColor{ return [UIColor colorFromHexValue:0xffffff]; }
+
 @end

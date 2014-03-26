@@ -7,9 +7,12 @@
 //
 
 #import "CIHomeView.h"
-#import "UIColor+Palette.h"
 
 @implementation CIHomeView
+
+@synthesize castItHeader;
+@synthesize chromeCastsView, mediaLocationsView;
+
 
 - (id)initWithFrame:(CGRect)frame
 {
@@ -22,6 +25,11 @@
 
 - (void) applyStyle{
     [self setBackgroundColor:[UIColor mainBackgroundColor]];
+    [castItHeader setBackgroundColor:[UIColor clearColor]];
+    [chromeCastsView setContentType:ciChromeCastView];
+    [chromeCastsView applyStyle];
+    [mediaLocationsView setContentType:ciMediaListView];
+    [mediaLocationsView applyStyle];
 }
 
 /*

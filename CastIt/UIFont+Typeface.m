@@ -10,4 +10,6 @@
 
 @implementation UIFont (Typeface)
 
++ (UIFont *) headerSectionTypeface { return [UIFont fontWithName:@"OpenSans" size:14.0f]; }
+
 @end

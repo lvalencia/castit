@@ -18,4 +18,7 @@
 + (UIColor *) contentSectionTextColor;
 + (UIColor *) contentSectionHighlightedTextColor;
 
++ (UIColor *) buttonTextColor;
++ (UIColor *) standardLabelColor;
+
 @end

@@ -7,7 +7,12 @@
 //
 
 #import "CIView.h"
+#import "CIContentView.h"
 
 @interface CIHomeView : CIView<CIStyleable>
+
+@property (nonatomic, strong) IBOutlet UIImageView *castItHeader;
+@property (nonatomic, strong) IBOutlet CIContentView *chromeCastsView;
+@property (nonatomic, strong) IBOutlet CIContentView *mediaLocationsView;
 
 @end

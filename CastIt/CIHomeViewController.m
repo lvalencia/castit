@@ -7,6 +7,7 @@
 //
 
 #import "CIHomeViewController.h"
+#import "CIHomeView.h"
 
 @interface CIHomeViewController ()
 
@@ -27,6 +28,8 @@
 {
     [super viewDidLoad];
     // Do any additional setup after loading the view.
+    CIHomeView *view = (CIHomeView*)[self view];
+    [view applyStyle];
 }
 
 - (void)didReceiveMemoryWarning

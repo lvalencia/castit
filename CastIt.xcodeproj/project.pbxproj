@@ -38,6 +38,9 @@
 		B67605F618E2A5BB005637B2 /* OpenSans-Regular.ttf in Resources */ = {isa = PBXBuildFile; fileRef = B67605EC18E2A5BB005637B2 /* OpenSans-Regular.ttf */; };
 		B67605F718E2A5BB005637B2 /* OpenSans-Semibold.ttf in Resources */ = {isa = PBXBuildFile; fileRef = B67605ED18E2A5BB005637B2 /* OpenSans-Semibold.ttf */; };
 		B67605F818E2A5BB005637B2 /* OpenSans-SemiboldItalic.ttf in Resources */ = {isa = PBXBuildFile; fileRef = B67605EE18E2A5BB005637B2 /* OpenSans-SemiboldItalic.ttf */; };
+		B67605FB18E2BD19005637B2 /* CIContentView.m in Sources */ = {isa = PBXBuildFile; fileRef = B67605FA18E2BD19005637B2 /* CIContentView.m */; };
+		B67605FE18E2BFDA005637B2 /* CILabel.m in Sources */ = {isa = PBXBuildFile; fileRef = B67605FD18E2BFDA005637B2 /* CILabel.m */; };
+		B676060218E2C1D6005637B2 /* NSString+Copy.m in Sources */ = {isa = PBXBuildFile; fileRef = B676060118E2C1D6005637B2 /* NSString+Copy.m */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXContainerItemProxy section */
@@ -94,6 +97,12 @@
 		B67605EC18E2A5BB005637B2 /* OpenSans-Regular.ttf */ = {isa = PBXFileReference; lastKnownFileType = file; path = "OpenSans-Regular.ttf"; sourceTree = "<group>"; };
 		B67605ED18E2A5BB005637B2 /* OpenSans-Semibold.ttf */ = {isa = PBXFileReference; lastKnownFileType = file; path = "OpenSans-Semibold.ttf"; sourceTree = "<group>"; };
 		B67605EE18E2A5BB005637B2 /* OpenSans-SemiboldItalic.ttf */ = {isa = PBXFileReference; lastKnownFileType = file; path = "OpenSans-SemiboldItalic.ttf"; sourceTree = "<group>"; };
+		B67605F918E2BD19005637B2 /* CIContentView.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = CIContentView.h; sourceTree = "<group>"; };
+		B67605FA18E2BD19005637B2 /* CIContentView.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = CIContentView.m; sourceTree = "<group>"; };
+		B67605FC18E2BFDA005637B2 /* CILabel.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = CILabel.h; sourceTree = "<group>"; };
+		B67605FD18E2BFDA005637B2 /* CILabel.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = CILabel.m; sourceTree = "<group>"; };
+		B676060018E2C1D6005637B2 /* NSString+Copy.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = "NSString+Copy.h"; sourceTree = "<group>"; };
+		B676060118E2C1D6005637B2 /* NSString+Copy.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = "NSString+Copy.m"; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -154,6 +163,7 @@
 			isa = PBXGroup;
 			children = (
 				B67605DE18E2A03D005637B2 /* Protocols */,
+				B67605FF18E2BFE3005637B2 /* View Objects */,
 				B67605D018E29E1E005637B2 /* Views */,
 				B67605C318E29AA7005637B2 /* Controllers */,
 				B67605D718E29EA0005637B2 /* Categories */,
@@ -231,6 +241,8 @@
 				B67605D218E29E35005637B2 /* CIView.m */,
 				B67605D418E29E49005637B2 /* CIHomeView.h */,
 				B67605D518E29E49005637B2 /* CIHomeView.m */,
+				B67605F918E2BD19005637B2 /* CIContentView.h */,
+				B67605FA18E2BD19005637B2 /* CIContentView.m */,
 			);
 			name = Views;
 			sourceTree = "<group>";
@@ -244,6 +256,8 @@
 				B67605DC18E29FB5005637B2 /* UIColor+Palette.m */,
 				B67605E118E2A5A3005637B2 /* UIFont+Typeface.h */,
 				B67605E218E2A5A3005637B2 /* UIFont+Typeface.m */,
+				B676060018E2C1D6005637B2 /* NSString+Copy.h */,
+				B676060118E2C1D6005637B2 /* NSString+Copy.m */,
 			);
 			name = Categories;
 			sourceTree = "<group>";
@@ -271,6 +285,15 @@
 				B67605EE18E2A5BB005637B2 /* OpenSans-SemiboldItalic.ttf */,
 			);
 			name = Font;
+			sourceTree = "<group>";
+		};
+		B67605FF18E2BFE3005637B2 /* View Objects */ = {
+			isa = PBXGroup;
+			children = (
+				B67605FC18E2BFDA005637B2 /* CILabel.h */,
+				B67605FD18E2BFDA005637B2 /* CILabel.m */,
+			);
+			name = "View Objects";
 			sourceTree = "<group>";
 		};
 /* End PBXGroup section */
@@ -382,6 +405,9 @@
 			files = (
 				B67605DA18E29EF3005637B2 /* UIColor+Conversion.m in Sources */,
 				B67605E318E2A5A3005637B2 /* UIFont+Typeface.m in Sources */,
+				B67605FE18E2BFDA005637B2 /* CILabel.m in Sources */,
+				B67605FB18E2BD19005637B2 /* CIContentView.m in Sources */,
+				B676060218E2C1D6005637B2 /* NSString+Copy.m in Sources */,
 				B609801318E28E0400E4FAC5 /* AppDelegate.m in Sources */,
 				B67605CC18E29B0E005637B2 /* CIHomeViewController.m in Sources */,
 				B67605DD18E29FB5005637B2 /* UIColor+Palette.m in Sources */,
