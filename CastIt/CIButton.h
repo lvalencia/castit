@@ -1,5 +1,5 @@
 //
-//  CILabel.h
+//  CIButton.h
 //  CastIt
 //
 //  Created by Luis Valencia on 3/26/14.
@@ -9,8 +9,8 @@
 #import <UIKit/UIKit.h>
 #import "CIStyleable.h"
 
-@interface CILabel : UILabel<CIStyleable>
+@interface CIButton : UIButton<CIStyleable>
 
-@property (nonatomic) Class labelStyle;
+@property (nonatomic) Class buttonStyle;
 
 @end

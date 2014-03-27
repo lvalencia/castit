@@ -48,10 +48,19 @@
                                             <outlet property="headerTitle" destination="BNS-GN-QlN" id="cZj-fh-gJR"/>
                                         </connections>
                                     </view>
+                                    <button opaque="NO" contentMode="scaleToFill" fixedFrame="YES" contentHorizontalAlignment="center" contentVerticalAlignment="center" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="9dH-AE-Z5N" customClass="CIButton">
+                                        <rect key="frame" x="0.0" y="50" width="320" height="95"/>
+                                        <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+                                        <state key="normal" title="Instructions" image="chromecast_image">
+                                            <color key="titleColor" white="0.0" alpha="1" colorSpace="calibratedWhite"/>
+                                            <color key="titleShadowColor" white="0.5" alpha="1" colorSpace="calibratedWhite"/>
+                                        </state>
+                                    </button>
                                 </subviews>
                                 <color key="backgroundColor" red="1" green="1" blue="0.0" alpha="1" colorSpace="calibratedRGB"/>
                                 <connections>
                                     <outlet property="contentHeader" destination="YDi-l7-vei" id="bhn-Kr-vcr"/>
+                                    <outlet property="placeholderContent" destination="9dH-AE-Z5N" id="TMd-7L-MbQ"/>
                                 </connections>
                             </view>
                             <view contentMode="scaleToFill" fixedFrame="YES" translatesAutoresizingMaskIntoConstraints="NO" id="fZr-wo-x88" customClass="CIContentView">
@@ -82,10 +91,19 @@
                                             <outlet property="headerTitle" destination="odU-Ko-SlB" id="jgA-B2-VvS"/>
                                         </connections>
                                     </view>
+                                    <button opaque="NO" contentMode="scaleToFill" fixedFrame="YES" contentHorizontalAlignment="center" contentVerticalAlignment="center" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="RJP-XB-V0E" customClass="CIButton">
+                                        <rect key="frame" x="0.0" y="50" width="320" height="95"/>
+                                        <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+                                        <state key="normal" title="instructions" image="media_drive">
+                                            <color key="titleColor" white="0.0" alpha="1" colorSpace="calibratedWhite"/>
+                                            <color key="titleShadowColor" white="0.5" alpha="1" colorSpace="calibratedWhite"/>
+                                        </state>
+                                    </button>
                                 </subviews>
                                 <color key="backgroundColor" red="1" green="1" blue="0.0" alpha="1" colorSpace="calibratedRGB"/>
                                 <connections>
                                     <outlet property="contentHeader" destination="wpv-fa-dsW" id="fKH-3r-bGk"/>
+                                    <outlet property="placeholderContent" destination="RJP-XB-V0E" id="CLm-3M-2hf"/>
                                 </connections>
                             </view>
                             <label opaque="NO" clipsSubviews="YES" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" fixedFrame="YES" text="website" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="e2n-dd-Eiy">
@@ -121,7 +139,9 @@
         </scene>
     </scenes>
     <resources>
+        <image name="chromecast_image" width="78" height="38"/>
         <image name="logo_header" width="227" height="242"/>
+        <image name="media_drive" width="40" height="35"/>
         <image name="question_mark" width="13" height="13"/>
     </resources>
     <simulatedMetricsContainer key="defaultSimulatedMetrics">

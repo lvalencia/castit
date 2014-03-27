@@ -41,6 +41,7 @@
 		B67605FB18E2BD19005637B2 /* CIContentView.m in Sources */ = {isa = PBXBuildFile; fileRef = B67605FA18E2BD19005637B2 /* CIContentView.m */; };
 		B67605FE18E2BFDA005637B2 /* CILabel.m in Sources */ = {isa = PBXBuildFile; fileRef = B67605FD18E2BFDA005637B2 /* CILabel.m */; };
 		B676060218E2C1D6005637B2 /* NSString+Copy.m in Sources */ = {isa = PBXBuildFile; fileRef = B676060118E2C1D6005637B2 /* NSString+Copy.m */; };
+		B69A70ED18E3C4490039758C /* CIButton.m in Sources */ = {isa = PBXBuildFile; fileRef = B69A70EC18E3C4490039758C /* CIButton.m */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXContainerItemProxy section */
@@ -103,6 +104,8 @@
 		B67605FD18E2BFDA005637B2 /* CILabel.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = CILabel.m; sourceTree = "<group>"; };
 		B676060018E2C1D6005637B2 /* NSString+Copy.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = "NSString+Copy.h"; sourceTree = "<group>"; };
 		B676060118E2C1D6005637B2 /* NSString+Copy.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = "NSString+Copy.m"; sourceTree = "<group>"; };
+		B69A70EB18E3C4490039758C /* CIButton.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = CIButton.h; sourceTree = "<group>"; };
+		B69A70EC18E3C4490039758C /* CIButton.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = CIButton.m; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -292,6 +295,8 @@
 			children = (
 				B67605FC18E2BFDA005637B2 /* CILabel.h */,
 				B67605FD18E2BFDA005637B2 /* CILabel.m */,
+				B69A70EB18E3C4490039758C /* CIButton.h */,
+				B69A70EC18E3C4490039758C /* CIButton.m */,
 			);
 			name = "View Objects";
 			sourceTree = "<group>";
@@ -404,6 +409,7 @@
 			buildActionMask = 2147483647;
 			files = (
 				B67605DA18E29EF3005637B2 /* UIColor+Conversion.m in Sources */,
+				B69A70ED18E3C4490039758C /* CIButton.m in Sources */,
 				B67605E318E2A5A3005637B2 /* UIFont+Typeface.m in Sources */,
 				B67605FE18E2BFDA005637B2 /* CILabel.m in Sources */,
 				B67605FB18E2BD19005637B2 /* CIContentView.m in Sources */,

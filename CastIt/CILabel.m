@@ -18,7 +18,7 @@
 
 @implementation CILabel
 
-@synthesize labelType;
+@synthesize labelStyle;
 
 - (id)initWithFrame:(CGRect)frame
 {
@@ -30,12 +30,12 @@
 }
 
 - (void) applyStyle{
-    if (labelType == [CIContentHeader class]){
+    if (labelStyle == [CIContentHeader class]){
         [self setTextColor:[UIColor contentSectionTextColor]];
         [self setFont:[UIFont headerSectionTypeface]];
         [self setText:[NSString stringForHeader:[self containingHeaderForLabel]]];
     }
-    else if (labelType == [CIHomeView class]){
+    else if (labelStyle == [CIHomeView class]){
         
     }
 }

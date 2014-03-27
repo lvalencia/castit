@@ -15,6 +15,8 @@
 + (NSString *) webURL;
 + (NSString *) chromecastHeaderTitle;
 + (NSString *) mediaListHeaderTitle;
++ (NSString *) chromecastContentInstructions;
++ (NSString *) mediaListContentInstructions;
 
 + (NSString *) stringForHeader: (CIContentHeader *) header;
 

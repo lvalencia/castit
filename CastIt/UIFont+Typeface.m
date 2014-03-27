@@ -10,6 +10,19 @@
 
 @implementation UIFont (Typeface)
 
-+ (UIFont *) headerSectionTypeface { return [UIFont fontWithName:@"OpenSans" size:14.0f]; }
++ (UIFont *) headerSectionTypeface  { return [UIFont fontWithName:@"OpenSans"       size:14.0f]; }
++ (UIFont *) contentSectionTypeface { return [UIFont fontWithName:@"OpenSans-Light" size:20.0f]; }
+
++ (void) listSupportedFonts {
+    for (NSString* family in [UIFont familyNames])
+    {
+        NSLog(@"%@", family);
+        
+        for (NSString* name in [UIFont fontNamesForFamilyName: family])
+        {
+            NSLog(@"  %@", name);
+        }
+    }
+}
 
 @end

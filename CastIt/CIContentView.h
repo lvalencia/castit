@@ -8,6 +8,7 @@
 
 #import "CIView.h"
 #import "CILabel.h"
+#import "CIButton.h"
 
 enum CIContentViewType {
     ciChromeCastView = 0,
@@ -24,6 +25,7 @@ enum CIContentViewType {
 @interface CIContentView : CIView<CIStyleable>
 
 @property (nonatomic, strong) IBOutlet CIContentHeader* contentHeader;
+@property (nonatomic, strong) IBOutlet CIButton *placeholderContent;
 @property (nonatomic) enum CIContentViewType contentType;
 
 @end

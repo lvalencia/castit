@@ -11,9 +11,11 @@
 
 @implementation NSString (Copy)
 
-+ (NSString *) webURL                   { return @"www.cast.it"; }
-+ (NSString *) chromecastHeaderTitle    { return @"Select Available Chromecasts"; }
-+ (NSString *) mediaListHeaderTitle     { return @"Media Location"; }
++ (NSString *) webURL                       { return @"www.cast.it"; }
++ (NSString *) chromecastHeaderTitle        { return @"Select Available Chromecasts"; }
++ (NSString *) mediaListHeaderTitle         { return @"Media Location"; }
++ (NSString *) chromecastContentInstructions{ return @"No Chromecasts"; }
++ (NSString *) mediaListContentInstructions { return @"Please add a media location above."; }
 
 + (NSString *) stringForHeader: (CIContentHeader *) header{
     switch ([header headerType]) {

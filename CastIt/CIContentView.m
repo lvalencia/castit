@@ -14,7 +14,7 @@
 
 - (void) applyStyle{
     [self setBackgroundColor:[UIColor headerSectionBackgroundColor]];
-    [headerTitle setLabelType:[self class]];
+    [headerTitle setLabelStyle:[self class]];
     [headerTitle applyStyle];
 }
 
@@ -22,7 +22,7 @@
 
 @implementation CIContentView
 
-@synthesize contentHeader, contentType;
+@synthesize contentHeader, contentType, placeholderContent;
 
 - (id)initWithFrame:(CGRect)frame
 {
@@ -37,6 +37,7 @@
     [self setBackgroundColor:[UIColor contentSectionBackgroundColor]];
     [contentHeader setHeaderType:[self contentType]];
     [contentHeader applyStyle];
+    [placeholderContent applyStyle];
 }
 
 /*
