@@ -9,6 +9,8 @@
 #import <UIKit/UIKit.h>
 #import "CIStyleable.h"
 
+@class CIContentView;
+
 @interface CIButton : UIButton<CIStyleable>
 
 @property (nonatomic) Class buttonStyle;

@@ -11,6 +11,7 @@
 
 @interface CIButton()
 
+- (CIContentView *) getContainingContentView;
 - (enum CIContentViewType) getTypeOfContainingContentView;
 
 @end
@@ -56,17 +57,24 @@
                                       buttonFont, NSFontAttributeName,
                                       buttonTextColor, NSForegroundColorAttributeName,
                                       nil];
+    
     CGSize requiredSize = [[self titleForState:UIControlStateNormal] sizeWithAttributes:normalAttributes];
     [self sizeThatFits:requiredSize];
 }
-- (enum CIContentViewType) getTypeOfContainingContentView{
+
+- (CIContentView *) getContainingContentView {
     id contentView = [self superview];
     while (![contentView isKindOfClass:[CIContentView class]]){
         contentView = [contentView superview];
         if (contentView == nil)
-            return -1;
+            return nil;
     }
-    return [(CIContentView*)contentView contentType];
+    return (CIContentView*)contentView;
+}
+
+- (enum CIContentViewType) getTypeOfContainingContentView{
+    CIContentView *view = [self getContainingContentView];
+    return (view != nil) ? [view contentType] : -1;
 }
 
 /*

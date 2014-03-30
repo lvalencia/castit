@@ -7,6 +7,8 @@
 	objects = {
 
 /* Begin PBXBuildFile section */
+		B604517F18E7577000FDBD79 /* CIContentView+Adjusted.m in Sources */ = {isa = PBXBuildFile; fileRef = B604517E18E7577000FDBD79 /* CIContentView+Adjusted.m */; };
+		B604518218E7582900FDBD79 /* CIHomeView+Adjusted.m in Sources */ = {isa = PBXBuildFile; fileRef = B604518118E7582900FDBD79 /* CIHomeView+Adjusted.m */; };
 		B609800318E28E0400E4FAC5 /* Foundation.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = B609800218E28E0400E4FAC5 /* Foundation.framework */; };
 		B609800518E28E0400E4FAC5 /* CoreGraphics.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = B609800418E28E0400E4FAC5 /* CoreGraphics.framework */; };
 		B609800718E28E0400E4FAC5 /* UIKit.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = B609800618E28E0400E4FAC5 /* UIKit.framework */; };
@@ -55,6 +57,11 @@
 /* End PBXContainerItemProxy section */
 
 /* Begin PBXFileReference section */
+		B604517D18E7577000FDBD79 /* CIContentView+Adjusted.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = "CIContentView+Adjusted.h"; sourceTree = "<group>"; };
+		B604517E18E7577000FDBD79 /* CIContentView+Adjusted.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = "CIContentView+Adjusted.m"; sourceTree = "<group>"; };
+		B604518018E7582900FDBD79 /* CIHomeView+Adjusted.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = "CIHomeView+Adjusted.h"; sourceTree = "<group>"; };
+		B604518118E7582900FDBD79 /* CIHomeView+Adjusted.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = "CIHomeView+Adjusted.m"; sourceTree = "<group>"; };
+		B604518318E7590700FDBD79 /* CIApplicationConstants.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = CIApplicationConstants.h; sourceTree = "<group>"; };
 		B6097FFF18E28E0400E4FAC5 /* CastIt.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = CastIt.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		B609800218E28E0400E4FAC5 /* Foundation.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = Foundation.framework; path = System/Library/Frameworks/Foundation.framework; sourceTree = SDKROOT; };
 		B609800418E28E0400E4FAC5 /* CoreGraphics.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = CoreGraphics.framework; path = System/Library/Frameworks/CoreGraphics.framework; sourceTree = SDKROOT; };
@@ -261,6 +268,10 @@
 				B67605E218E2A5A3005637B2 /* UIFont+Typeface.m */,
 				B676060018E2C1D6005637B2 /* NSString+Copy.h */,
 				B676060118E2C1D6005637B2 /* NSString+Copy.m */,
+				B604517D18E7577000FDBD79 /* CIContentView+Adjusted.h */,
+				B604517E18E7577000FDBD79 /* CIContentView+Adjusted.m */,
+				B604518018E7582900FDBD79 /* CIHomeView+Adjusted.h */,
+				B604518118E7582900FDBD79 /* CIHomeView+Adjusted.m */,
 			);
 			name = Categories;
 			sourceTree = "<group>";
@@ -269,6 +280,7 @@
 			isa = PBXGroup;
 			children = (
 				B67605E018E2A0F0005637B2 /* CIStyleable.h */,
+				B604518318E7590700FDBD79 /* CIApplicationConstants.h */,
 			);
 			name = Protocols;
 			sourceTree = "<group>";
@@ -416,8 +428,10 @@
 				B676060218E2C1D6005637B2 /* NSString+Copy.m in Sources */,
 				B609801318E28E0400E4FAC5 /* AppDelegate.m in Sources */,
 				B67605CC18E29B0E005637B2 /* CIHomeViewController.m in Sources */,
+				B604518218E7582900FDBD79 /* CIHomeView+Adjusted.m in Sources */,
 				B67605DD18E29FB5005637B2 /* UIColor+Palette.m in Sources */,
 				B609800F18E28E0400E4FAC5 /* main.m in Sources */,
+				B604517F18E7577000FDBD79 /* CIContentView+Adjusted.m in Sources */,
 				B67605C918E29AE8005637B2 /* CIViewController.m in Sources */,
 				B67605D318E29E35005637B2 /* CIView.m in Sources */,
 				B67605D618E29E49005637B2 /* CIHomeView.m in Sources */,

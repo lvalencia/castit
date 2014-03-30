@@ -11,6 +11,8 @@
 #import "NSString+Copy.h"
 #import "UIFont+Typeface.h"
 
+#define isiPhone5  ([[UIScreen mainScreen] bounds].size.height == 568)?TRUE:FALSE
+
 @protocol CIStyleable <NSObject>
 
 - (void) applyStyle;
