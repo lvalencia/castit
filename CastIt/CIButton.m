@@ -9,16 +9,9 @@
 #import "CIButton.h"
 #import "CIContentView.h"
 
-@interface CIButton()
-
-- (CIContentView *) getContainingContentView;
-- (enum CIContentViewType) getTypeOfContainingContentView;
-
-@end
-
 @implementation CIButton
 
-@synthesize type;
+@synthesize buttonStyle;
 
 - (id)initWithFrame:(CGRect)frame
 {
@@ -36,9 +29,9 @@
     [self setContentHorizontalAlignment:UIControlContentHorizontalAlignmentLeft];
     [self setTitleColor:buttonTextColor forState:UIControlStateNormal];
     [self.titleLabel setFont:buttonFont];
-
-    switch ([self getTypeOfContainingContentView]) {
-        case ciChromeCastView:{
+   
+    switch (buttonStyle) {
+        case ciChromeCastRefreshButton:{
             [self setImageEdgeInsets:UIEdgeInsetsMake(0, 30, 0, 0)];
             [self setTitleEdgeInsets:UIEdgeInsetsMake(0, 60, 30, 0)];
             [self setTitle:[NSString chromecastContentInstructions] forState:UIControlStateNormal];
@@ -57,7 +50,7 @@
             
         }
             break;
-        case ciMediaListView:{
+        case ciMediaListButton:{
             [self setImageEdgeInsets:UIEdgeInsetsMake(0, 48, 0, 0)];
             [self setTitleEdgeInsets:UIEdgeInsetsMake(0, 70, 0, 0)];
             [self setTitle:[NSString mediaListContentInstructions] forState:UIControlStateNormal];
@@ -65,11 +58,6 @@
             [self.titleLabel setTextAlignment:NSTextAlignmentCenter];
         }
             break;
-        default:
-            break;
-    }
-   
-    switch (type) {
         case ciWebsiteButton:
             [self setTitle:[NSString webURL] forState:UIControlStateNormal];
         case ciFAQbutton:{
@@ -100,6 +88,7 @@
         default:
             break;
     }
+    
     NSDictionary* normalAttributes = [NSDictionary dictionaryWithObjectsAndKeys:
                                       buttonFont, NSFontAttributeName,
                                       buttonTextColor, NSForegroundColorAttributeName,
@@ -107,21 +96,6 @@
     
     CGSize requiredSize = [[self titleForState:UIControlStateNormal] sizeWithAttributes:normalAttributes];
     [self sizeThatFits:requiredSize];
-}
-
-- (CIContentView *) getContainingContentView {
-    id contentView = [self superview];
-    while (![contentView isKindOfClass:[CIContentView class]]){
-        contentView = [contentView superview];
-        if (contentView == nil)
-            return nil;
-    }
-    return (CIContentView*)contentView;
-}
-
-- (enum CIContentViewType) getTypeOfContainingContentView{
-    CIContentView *view = [self getContainingContentView];
-    return (view != nil) ? [view contentType] : -1;
 }
 
 /*

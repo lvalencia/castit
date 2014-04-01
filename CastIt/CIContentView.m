@@ -16,7 +16,7 @@
     [self setBackgroundColor:[UIColor headerSectionBackgroundColor]];
     [headerTitle setLabelStyle:[self class]];
     [headerTitle applyStyle];
-    [headerButton setType:ciAddLocation];
+    [headerButton setButtonStyle:ciAddLocation];
     [headerButton applyStyle];
 }
 
@@ -39,6 +39,18 @@
     [self setBackgroundColor:[UIColor contentSectionBackgroundColor]];
     [contentHeader setHeaderType:[self contentType]];
     [contentHeader applyStyle];
+    
+    switch ([self contentType]) {
+        case ciChromeCastView:
+            [placeholderContent setButtonStyle:ciChromeCastRefreshButton];
+            break;
+        case ciMediaListView:
+            [placeholderContent setButtonStyle:ciMediaListButton];
+            break;
+        default:
+            break;
+    }
+    
     [placeholderContent applyStyle];
 }
 /*

@@ -12,14 +12,15 @@
 @class CIContentView;
 
 enum CIButtonType {
-    ciWebsiteButton = 1,
+    ciChromeCastRefreshButton = 1,
+    ciMediaListButton,
+    ciWebsiteButton,
     ciFAQbutton,
     ciAddLocation
 };
 
 @interface CIButton : UIButton<CIStyleable>
 
-@property (nonatomic) Class buttonStyle;
-@property (nonatomic) enum CIButtonType type;
+@property (nonatomic) enum CIButtonType buttonStyle;
 
 @end

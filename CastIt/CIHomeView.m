@@ -34,10 +34,10 @@
     [mediaLocationsView setContentType:ciMediaListView];
     [mediaLocationsView applyStyle];
     
-    [website setType:ciWebsiteButton];
+    [website setButtonStyle:ciWebsiteButton];
     [website applyStyle];
     
-    [FAQ setType:ciFAQbutton];
+    [FAQ setButtonStyle:ciFAQbutton];
     [FAQ applyStyle];
 }
 
