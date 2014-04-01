@@ -16,6 +16,7 @@
 + (NSString *) mediaListHeaderTitle         { return @"Media Location"; }
 + (NSString *) chromecastContentInstructions{ return @"No Chromecasts"; }
 + (NSString *) mediaListContentInstructions { return @"Please add a media location above."; }
++ (NSString *) refreshChromecastInstructions{ return @"Scan Network"; }
 
 + (NSString *) stringForHeader: (CIContentHeader *) header{
     switch ([header headerType]) {

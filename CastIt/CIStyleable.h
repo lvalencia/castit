@@ -10,6 +10,7 @@
 #import "UIColor+Palette.h"
 #import "NSString+Copy.h"
 #import "UIFont+Typeface.h"
+#import "UIImage+Assets.h"
 
 #define isiPhone5  ([[UIScreen mainScreen] bounds].size.height == 568)?TRUE:FALSE
 

@@ -38,8 +38,21 @@
     switch ([self getTypeOfContainingContentView]) {
         case ciChromeCastView:{
             [self setImageEdgeInsets:UIEdgeInsetsMake(0, 30, 0, 0)];
-            [self setTitleEdgeInsets:UIEdgeInsetsMake(0, 60, 0, 0)];
+            [self setTitleEdgeInsets:UIEdgeInsetsMake(0, 60, 30, 0)];
             [self setTitle:[NSString chromecastContentInstructions] forState:UIControlStateNormal];
+            
+            UIImage *backgroundImage = [UIImage refresh];
+            CGRect frame = CGRectMake(148, 55, 17, 16);
+            UIView *subView = [[UIView alloc] initWithFrame:frame];
+            UIColor *backgroundColor = [[UIColor alloc] initWithPatternImage:backgroundImage];
+            subView.backgroundColor = backgroundColor;
+            [self insertSubview:subView atIndex:0];
+            
+            CILabel *subtitle = [[CILabel alloc] initWithFrame:CGRectMake(170, 53, 112, 18)];
+            [subtitle setLabelStyle:[self class]];
+            [subtitle applyStyle];
+            [self addSubview:subtitle];
+            
         }
             break;
         case ciMediaListView:{

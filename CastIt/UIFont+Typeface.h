@@ -12,6 +12,7 @@
 
 + (UIFont *) headerSectionTypeface;
 + (UIFont *) contentSectionTypeface;
++ (UIFont *) contentSectionHighlightedTypeface;
 
 + (void) listSupportedFonts;
 

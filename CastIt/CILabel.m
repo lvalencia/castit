@@ -35,8 +35,10 @@
         [self setFont:[UIFont headerSectionTypeface]];
         [self setText:[NSString stringForHeader:[self containingHeaderForLabel]]];
     }
-    else if (labelStyle == [CIHomeView class]){
-        
+    else if (labelStyle == [CIButton class]){
+        [self setTextColor:[UIColor contentSectionHighlightedTextColor]];
+        [self setFont:[UIFont contentSectionHighlightedTypeface]];
+        [self setText:[NSString refreshChromecastInstructions]];
     }
 }
 

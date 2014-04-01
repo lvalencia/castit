@@ -17,6 +17,7 @@
 + (NSString *) mediaListHeaderTitle;
 + (NSString *) chromecastContentInstructions;
 + (NSString *) mediaListContentInstructions;
++ (NSString *) refreshChromecastInstructions;
 
 + (NSString *) stringForHeader: (CIContentHeader *) header;
 
