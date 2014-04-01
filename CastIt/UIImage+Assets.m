@@ -10,6 +10,7 @@
 
 @implementation UIImage (Assets)
 
-+ (UIImage *) refresh { return [[UIImage imageNamed:@"refresh"] imageWithRenderingMode:UIImageRenderingModeAlwaysOriginal]; }
++ (UIImage *) refresh   { return [[UIImage imageNamed:@"refresh"]   imageWithRenderingMode:UIImageRenderingModeAlwaysOriginal]; }
++ (UIImage *) add       { return [[UIImage imageNamed:@"add"]       imageWithRenderingMode:UIImageRenderingModeAlwaysOriginal]; }
 
 @end

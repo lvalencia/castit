@@ -14,5 +14,7 @@
 @property (nonatomic, strong) IBOutlet UIImageView *castItHeader;
 @property (nonatomic, strong) IBOutlet CIContentView *chromeCastsView;
 @property (nonatomic, strong) IBOutlet CIContentView *mediaLocationsView;
+@property (nonatomic, strong) IBOutlet CIButton *website;
+@property (nonatomic, strong) IBOutlet CIButton *FAQ;
 
 @end

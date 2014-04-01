@@ -11,8 +11,10 @@
 @interface UIFont (Typeface)
 
 + (UIFont *) headerSectionTypeface;
++ (UIFont *) headerButtonTypeface;
 + (UIFont *) contentSectionTypeface;
 + (UIFont *) contentSectionHighlightedTypeface;
++ (UIFont *) footerTypeface;
 
 + (void) listSupportedFonts;
 

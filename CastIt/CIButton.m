@@ -18,6 +18,8 @@
 
 @implementation CIButton
 
+@synthesize type;
+
 - (id)initWithFrame:(CGRect)frame
 {
     self = [super initWithFrame:frame];
@@ -62,6 +64,38 @@
             [self.titleLabel setLineBreakMode:NSLineBreakByWordWrapping];
             [self.titleLabel setTextAlignment:NSTextAlignmentCenter];
         }
+            break;
+        default:
+            break;
+    }
+   
+    switch (type) {
+        case ciWebsiteButton:
+            [self setTitle:[NSString webURL] forState:UIControlStateNormal];
+        case ciFAQbutton:{
+            buttonTextColor =[UIColor buttonTextColor];
+            buttonFont = [UIFont footerTypeface];
+            [self setTitleColor:buttonTextColor forState:UIControlStateNormal];
+            [self.titleLabel setFont:buttonFont];
+        }
+            break;
+        case ciAddLocation:
+            [self setImageEdgeInsets:UIEdgeInsetsMake(0, 17, 0, 0)];
+            [self setTitleEdgeInsets:UIEdgeInsetsMake(0, 25, 1, 0)];
+            
+            buttonTextColor =[UIColor buttonTextColor];
+            buttonFont = [UIFont headerButtonTypeface];
+            [self setTitleColor:buttonTextColor forState:UIControlStateNormal];
+            [self setTitleColor:[buttonTextColor colorByChangingAlphaTo:0.2] forState:UIControlStateHighlighted];
+            [self.titleLabel setFont:buttonFont];
+            [self setImage:[[UIImage add] imageByApplyingAlpha:0.2] forState:UIControlStateHighlighted];
+            [self setBackgroundColor:[UIColor mainBackgroundColor]];
+            
+            self.layer.borderColor = [UIColor mainBackgroundColor].CGColor;
+            self.layer.borderWidth = 0.5f;
+            self.layer.cornerRadius = 5;
+            
+            [self setTitle:[NSString headerButtonText] forState:UIControlStateNormal];
             break;
         default:
             break;

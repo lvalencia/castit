@@ -11,14 +11,15 @@
 #import "CIButton.h"
 
 enum CIContentViewType {
-    ciChromeCastView = 0,
+    ciChromeCastView = 1,
     ciMediaListView
 };
 
 @interface CIContentHeader : CIView<CIStyleable>
 
 @property (nonatomic) enum CIContentViewType headerType;
-@property (nonatomic, strong) IBOutlet CILabel* headerTitle;
+@property (nonatomic, strong) IBOutlet CILabel *headerTitle;
+@property (nonatomic, strong) IBOutlet CIButton *headerButton;
 
 @end
 

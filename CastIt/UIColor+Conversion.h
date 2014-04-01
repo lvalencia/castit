@@ -11,5 +11,6 @@
 @interface UIColor (Conversion)
 
 + (UIColor *) colorFromHexValue:(int) value;
+- (UIColor *) colorByChangingAlphaTo:(CGFloat)newAlpha;
 
 @end

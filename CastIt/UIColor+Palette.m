@@ -7,7 +7,6 @@
 //
 
 #import "UIColor+Palette.h"
-#import "UIColor+Conversion.h"
 
 @implementation UIColor (Palette)
 

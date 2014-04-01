@@ -7,10 +7,12 @@
 //
 
 #import <Foundation/Foundation.h>
+#import <QuartzCore/QuartzCore.h>
 #import "UIColor+Palette.h"
 #import "NSString+Copy.h"
 #import "UIFont+Typeface.h"
 #import "UIImage+Assets.h"
+#import "UIImage+Conversion.h"
 
 #define isiPhone5  ([[UIScreen mainScreen] bounds].size.height == 568)?TRUE:FALSE
 

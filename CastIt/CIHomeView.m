@@ -12,7 +12,7 @@
 
 @synthesize castItHeader;
 @synthesize chromeCastsView, mediaLocationsView;
-
+@synthesize website, FAQ;
 
 - (id)initWithFrame:(CGRect)frame
 {
@@ -26,10 +26,18 @@
 - (void) applyStyle{
     [self setBackgroundColor:[UIColor mainBackgroundColor]];
     [castItHeader setBackgroundColor:[UIColor clearColor]];
+    
     [chromeCastsView setContentType:ciChromeCastView];
     [chromeCastsView applyStyle];
+    
     [mediaLocationsView setContentType:ciMediaListView];
     [mediaLocationsView applyStyle];
+    
+    [website setType:ciWebsiteButton];
+    [website applyStyle];
+    
+    [FAQ setType:ciFAQbutton];
+    [FAQ applyStyle];
 }
 
 /*

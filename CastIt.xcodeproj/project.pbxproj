@@ -10,6 +10,7 @@
 		B604517F18E7577000FDBD79 /* CIContentView+Adjusted.m in Sources */ = {isa = PBXBuildFile; fileRef = B604517E18E7577000FDBD79 /* CIContentView+Adjusted.m */; };
 		B604518218E7582900FDBD79 /* CIHomeView+Adjusted.m in Sources */ = {isa = PBXBuildFile; fileRef = B604518118E7582900FDBD79 /* CIHomeView+Adjusted.m */; };
 		B604518C18EA9CCE00FDBD79 /* UIImage+Assets.m in Sources */ = {isa = PBXBuildFile; fileRef = B604518B18EA9CCE00FDBD79 /* UIImage+Assets.m */; };
+		B604518F18EAB27700FDBD79 /* UIImage+Conversion.m in Sources */ = {isa = PBXBuildFile; fileRef = B604518E18EAB27700FDBD79 /* UIImage+Conversion.m */; };
 		B609800318E28E0400E4FAC5 /* Foundation.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = B609800218E28E0400E4FAC5 /* Foundation.framework */; };
 		B609800518E28E0400E4FAC5 /* CoreGraphics.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = B609800418E28E0400E4FAC5 /* CoreGraphics.framework */; };
 		B609800718E28E0400E4FAC5 /* UIKit.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = B609800618E28E0400E4FAC5 /* UIKit.framework */; };
@@ -65,6 +66,8 @@
 		B604518318E7590700FDBD79 /* CIApplicationConstants.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = CIApplicationConstants.h; sourceTree = "<group>"; };
 		B604518A18EA9CCE00FDBD79 /* UIImage+Assets.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = "UIImage+Assets.h"; sourceTree = "<group>"; };
 		B604518B18EA9CCE00FDBD79 /* UIImage+Assets.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = "UIImage+Assets.m"; sourceTree = "<group>"; };
+		B604518D18EAB27700FDBD79 /* UIImage+Conversion.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = "UIImage+Conversion.h"; sourceTree = "<group>"; };
+		B604518E18EAB27700FDBD79 /* UIImage+Conversion.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = "UIImage+Conversion.m"; sourceTree = "<group>"; };
 		B6097FFF18E28E0400E4FAC5 /* CastIt.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = CastIt.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		B609800218E28E0400E4FAC5 /* Foundation.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = Foundation.framework; path = System/Library/Frameworks/Foundation.framework; sourceTree = SDKROOT; };
 		B609800418E28E0400E4FAC5 /* CoreGraphics.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = CoreGraphics.framework; path = System/Library/Frameworks/CoreGraphics.framework; sourceTree = SDKROOT; };
@@ -263,6 +266,8 @@
 		B67605D718E29EA0005637B2 /* Categories */ = {
 			isa = PBXGroup;
 			children = (
+				B604518D18EAB27700FDBD79 /* UIImage+Conversion.h */,
+				B604518E18EAB27700FDBD79 /* UIImage+Conversion.m */,
 				B67605D818E29EF3005637B2 /* UIColor+Conversion.h */,
 				B67605D918E29EF3005637B2 /* UIColor+Conversion.m */,
 				B67605DB18E29FB5005637B2 /* UIColor+Palette.h */,
@@ -429,6 +434,7 @@
 				B69A70ED18E3C4490039758C /* CIButton.m in Sources */,
 				B67605E318E2A5A3005637B2 /* UIFont+Typeface.m in Sources */,
 				B67605FE18E2BFDA005637B2 /* CILabel.m in Sources */,
+				B604518F18EAB27700FDBD79 /* UIImage+Conversion.m in Sources */,
 				B67605FB18E2BD19005637B2 /* CIContentView.m in Sources */,
 				B676060218E2C1D6005637B2 /* NSString+Copy.m in Sources */,
 				B609801318E28E0400E4FAC5 /* AppDelegate.m in Sources */,

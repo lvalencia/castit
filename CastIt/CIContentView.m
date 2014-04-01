@@ -10,12 +10,14 @@
 
 @implementation CIContentHeader
 
-@synthesize headerType, headerTitle;
+@synthesize headerType, headerTitle, headerButton;
 
 - (void) applyStyle{
     [self setBackgroundColor:[UIColor headerSectionBackgroundColor]];
     [headerTitle setLabelStyle:[self class]];
     [headerTitle applyStyle];
+    [headerButton setType:ciAddLocation];
+    [headerButton applyStyle];
 }
 
 @end

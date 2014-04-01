@@ -85,9 +85,19 @@
                                                     <color key="titleShadowColor" white="0.5" alpha="1" colorSpace="calibratedWhite"/>
                                                 </state>
                                             </button>
+                                            <button opaque="NO" contentMode="scaleToFill" fixedFrame="YES" contentHorizontalAlignment="center" contentVerticalAlignment="center" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="Weh-1V-6qb" customClass="CIButton">
+                                                <rect key="frame" x="186" y="8" width="120" height="37"/>
+                                                <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+                                                <color key="backgroundColor" red="1" green="0.0" blue="0.0" alpha="1" colorSpace="calibratedRGB"/>
+                                                <state key="normal" title="Add Location" image="add">
+                                                    <color key="titleColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
+                                                    <color key="titleShadowColor" white="0.5" alpha="1" colorSpace="calibratedWhite"/>
+                                                </state>
+                                            </button>
                                         </subviews>
                                         <color key="backgroundColor" red="0.50196081399917603" green="0.25098040699958801" blue="0.0" alpha="1" colorSpace="calibratedRGB"/>
                                         <connections>
+                                            <outlet property="headerButton" destination="Weh-1V-6qb" id="o3E-Kq-fNa"/>
                                             <outlet property="headerTitle" destination="odU-Ko-SlB" id="jgA-B2-VvS"/>
                                         </connections>
                                     </view>
@@ -106,7 +116,7 @@
                                     <outlet property="placeholderContent" destination="RJP-XB-V0E" id="CLm-3M-2hf"/>
                                 </connections>
                             </view>
-                            <button opaque="NO" contentMode="scaleToFill" fixedFrame="YES" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="3o4-Q3-p6b">
+                            <button opaque="NO" contentMode="scaleToFill" fixedFrame="YES" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="3o4-Q3-p6b" customClass="CIButton">
                                 <rect key="frame" x="270" y="536" width="30" height="30"/>
                                 <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
                                 <state key="normal" title="FAQ">
@@ -114,7 +124,7 @@
                                     <color key="titleShadowColor" white="0.5" alpha="1" colorSpace="calibratedWhite"/>
                                 </state>
                             </button>
-                            <button opaque="NO" contentMode="scaleToFill" fixedFrame="YES" contentHorizontalAlignment="left" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="A1p-6j-HWj">
+                            <button opaque="NO" contentMode="scaleToFill" fixedFrame="YES" contentHorizontalAlignment="left" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="A1p-6j-HWj" customClass="CIButton">
                                 <rect key="frame" x="20" y="536" width="155" height="30"/>
                                 <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
                                 <state key="normal" title="Website">
@@ -125,9 +135,11 @@
                         </subviews>
                         <color key="backgroundColor" red="1" green="0.0" blue="0.0" alpha="1" colorSpace="calibratedRGB"/>
                         <connections>
+                            <outlet property="FAQ" destination="3o4-Q3-p6b" id="6L6-0j-5V5"/>
                             <outlet property="castItHeader" destination="rda-19-yhA" id="NBa-rz-4hm"/>
                             <outlet property="chromeCastsView" destination="Xp2-Ub-jLK" id="MtC-n5-ROD"/>
                             <outlet property="mediaLocationsView" destination="fZr-wo-x88" id="R0v-0d-zE2"/>
+                            <outlet property="website" destination="A1p-6j-HWj" id="FjZ-7b-WWQ"/>
                         </connections>
                     </view>
                     <connections>
@@ -140,6 +152,7 @@
         </scene>
     </scenes>
     <resources>
+        <image name="add" width="11" height="11"/>
         <image name="chromecast_image" width="78" height="38"/>
         <image name="logo_header" width="227" height="242"/>
         <image name="media_drive" width="40" height="35"/>

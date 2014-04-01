@@ -1,5 +1,5 @@
 //
-//  UIImage+Assets.h
+//  UIImage+Conversion.h
 //  CastIt
 //
 //  Created by Luis Valencia on 4/1/14.
@@ -8,9 +8,8 @@
 
 #import <UIKit/UIKit.h>
 
-@interface UIImage (Assets)
+@interface UIImage (Conversion)
 
-+ (UIImage *) refresh;
-+ (UIImage *) add;
+- (UIImage *)imageByApplyingAlpha:(CGFloat) alpha;
 
 @end

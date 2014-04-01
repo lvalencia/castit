@@ -18,6 +18,7 @@
 + (NSString *) chromecastContentInstructions;
 + (NSString *) mediaListContentInstructions;
 + (NSString *) refreshChromecastInstructions;
++ (NSString *) headerButtonText;
 
 + (NSString *) stringForHeader: (CIContentHeader *) header;
 
