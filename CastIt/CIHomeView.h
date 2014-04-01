@@ -17,4 +17,7 @@
 @property (nonatomic, strong) IBOutlet CIButton *website;
 @property (nonatomic, strong) IBOutlet CIButton *FAQ;
 
+- (IBAction) openSite:(CIButton *) websiteButton;
+- (IBAction) openFAQSectionOfSite:(CIButton *) FAQButton;
+
 @end

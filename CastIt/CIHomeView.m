@@ -7,6 +7,7 @@
 //
 
 #import "CIHomeView.h"
+#import "NSURL+Links.h"
 
 @implementation CIHomeView
 
@@ -40,6 +41,12 @@
     [FAQ applyStyle];
 }
 
+- (IBAction) openSite:(CIButton *) websiteButton{
+    [[UIApplication sharedApplication] openURL:[NSURL webURL]];
+}
+- (IBAction) openFAQSectionOfSite:(CIButton *) FAQButton{
+    [[UIApplication sharedApplication] openURL:[NSURL FAQURL]];
+}
 /*
 // Only override drawRect: if you perform custom drawing.
 // An empty implementation adversely affects performance during animation.
