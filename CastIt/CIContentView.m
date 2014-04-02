@@ -8,6 +8,7 @@
 
 #import "CIContentView.h"
 #import "Reachability.h"
+#import "CIAlertView.h"
 
 @implementation CIContentHeader
 
@@ -57,26 +58,41 @@
 
 - (IBAction) searchForChromeCasts:(CIButton *)sender{
     NSLog(@"I'm Searching for Chrome Casts");
-    //Set up the Table View
-    //Set up the Spinning Icon
-    //Fade out the Placeholder and Fade in the table View
-    [UIView animateWithDuration:1.0 animations:^(void) {
-        sender.alpha = 0;
-    }];
+    if ([[Reachability reachabilityForLocalWiFi] currentReachabilityStatus] != ReachableViaWiFi) {
+        CIAlertView *updateAlert = [[CIAlertView alloc] initWithTitle:[NSString wifiAlertTitle]
+                                                              message:[NSString wifiChromecastAlertMessage]
+                                                    cancelButtonTitle:[NSString wifiAlertOkayTitle]
+                                                    otherButtonTitles: nil];
+        
+        [updateAlert showWithDismissHandler:^(NSInteger selectedIndex, BOOL didCancel){}];
+    }
+    else {
+        //Set up the Table View
+        //Set up the Spinning Icon
+        //Fade out the Placeholder and Fade in the table View
+        [UIView animateWithDuration:1.0 animations:^(void) {
+            sender.alpha = 0;
+        }];
+    }
 }
 
 - (IBAction) searchForMediaLocations:(CIButton*) sender{
     NSLog(@"I'm Searching for Media Locations");
     
     if ([[Reachability reachabilityForLocalWiFi] currentReachabilityStatus] != ReachableViaWiFi) {
-        //Code to execute if WiFi is not enabled
-        NSLog(@"NOT CONNECTED TO WIFI");
+        CIAlertView *updateAlert = [[CIAlertView alloc] initWithTitle:[NSString wifiAlertTitle]
+                                                              message:[NSString wifiMediaAlertMessage]
+                                                    cancelButtonTitle:[NSString wifiAlertOkayTitle]
+                                                    otherButtonTitles: nil];
+        
+        [updateAlert showWithDismissHandler:^(NSInteger selectedIndex, BOOL didCancel){}];
     }
-     
-    if ([sender buttonStyle] == ciMediaListButton){
-        [UIView animateWithDuration:1.0 animations:^(void) {
-            sender.alpha = 0;
-        }];
+    else {
+        if ([sender buttonStyle] == ciMediaListButton){
+            [UIView animateWithDuration:1.0 animations:^(void) {
+                sender.alpha = 0;
+            }];
+        }
     }
 }
 /*

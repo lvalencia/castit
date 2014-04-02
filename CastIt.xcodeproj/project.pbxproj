@@ -50,6 +50,7 @@
 		B676060218E2C1D6005637B2 /* NSString+Copy.m in Sources */ = {isa = PBXBuildFile; fileRef = B676060118E2C1D6005637B2 /* NSString+Copy.m */; };
 		B69A70ED18E3C4490039758C /* CIButton.m in Sources */ = {isa = PBXBuildFile; fileRef = B69A70EC18E3C4490039758C /* CIButton.m */; };
 		B6EF63E918EBCDE800864DDB /* libReachability.a in Frameworks */ = {isa = PBXBuildFile; fileRef = B6EF63E418EBCD4100864DDB /* libReachability.a */; };
+		B6EF63EC18EBD1B000864DDB /* CIAlertView.m in Sources */ = {isa = PBXBuildFile; fileRef = B6EF63EB18EBD1B000864DDB /* CIAlertView.m */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXContainerItemProxy section */
@@ -151,6 +152,8 @@
 		B69A70EB18E3C4490039758C /* CIButton.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = CIButton.h; sourceTree = "<group>"; };
 		B69A70EC18E3C4490039758C /* CIButton.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = CIButton.m; sourceTree = "<group>"; };
 		B6EF63DE18EBCD4000864DDB /* Reachability.xcodeproj */ = {isa = PBXFileReference; lastKnownFileType = "wrapper.pb-project"; name = Reachability.xcodeproj; path = Reachability/Reachability.xcodeproj; sourceTree = "<group>"; };
+		B6EF63EA18EBD1B000864DDB /* CIAlertView.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = CIAlertView.h; sourceTree = "<group>"; };
+		B6EF63EB18EBD1B000864DDB /* CIAlertView.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = CIAlertView.m; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -359,6 +362,8 @@
 				B69A70EC18E3C4490039758C /* CIButton.m */,
 				B604519618EB48A100FDBD79 /* CITableViewCell.h */,
 				B604519718EB48A100FDBD79 /* CITableViewCell.m */,
+				B6EF63EA18EBD1B000864DDB /* CIAlertView.h */,
+				B6EF63EB18EBD1B000864DDB /* CIAlertView.m */,
 			);
 			name = "View Objects";
 			sourceTree = "<group>";
@@ -519,6 +524,7 @@
 				B67605DD18E29FB5005637B2 /* UIColor+Palette.m in Sources */,
 				B604518C18EA9CCE00FDBD79 /* UIImage+Assets.m in Sources */,
 				B609800F18E28E0400E4FAC5 /* main.m in Sources */,
+				B6EF63EC18EBD1B000864DDB /* CIAlertView.m in Sources */,
 				B604517F18E7577000FDBD79 /* CIContentView+Adjusted.m in Sources */,
 				B67605C918E29AE8005637B2 /* CIViewController.m in Sources */,
 				B67605D318E29E35005637B2 /* CIView.m in Sources */,

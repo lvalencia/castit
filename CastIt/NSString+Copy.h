@@ -20,6 +20,12 @@
 + (NSString *) refreshChromecastInstructions;
 + (NSString *) headerButtonText;
 
++ (NSString *) wifiAlertTitle;
++ (NSString *) wifiChromecastAlertMessage;
++ (NSString *) wifiMediaAlertMessage;
++ (NSString *) wifiAlertCancelButtonTitle;
++ (NSString *) wifiAlertOkayTitle;
+
 + (NSString *) stringForHeader: (CIContentHeader *) header;
 
 @end

@@ -19,6 +19,12 @@
 + (NSString *) refreshChromecastInstructions{ return @"Scan Network"; }
 + (NSString *) headerButtonText             { return @"Add Location"; }
 
++ (NSString *) wifiAlertTitle               { return @"Not Connected To Local Wifi"; }
++ (NSString *) wifiChromecastAlertMessage   { return @"In order to connect to Chromecast on the network, this phone must also be connected to the network."; }
++ (NSString *) wifiMediaAlertMessage        { return @"In order to connect to your Media on the network, this phone must also be connected to the network."; }
++ (NSString *) wifiAlertCancelButtonTitle   { return @"Cancel"; }
++ (NSString *) wifiAlertOkayTitle           { return @"OK"; }
+
 + (NSString *) stringForHeader: (CIContentHeader *) header{
     switch ([header headerType]) {
         case ciChromeCastView:
