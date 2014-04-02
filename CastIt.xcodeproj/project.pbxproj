@@ -12,6 +12,8 @@
 		B604518C18EA9CCE00FDBD79 /* UIImage+Assets.m in Sources */ = {isa = PBXBuildFile; fileRef = B604518B18EA9CCE00FDBD79 /* UIImage+Assets.m */; };
 		B604518F18EAB27700FDBD79 /* UIImage+Conversion.m in Sources */ = {isa = PBXBuildFile; fileRef = B604518E18EAB27700FDBD79 /* UIImage+Conversion.m */; };
 		B604519218EAB56B00FDBD79 /* NSURL+Links.m in Sources */ = {isa = PBXBuildFile; fileRef = B604519118EAB56B00FDBD79 /* NSURL+Links.m */; };
+		B604519518EB47AC00FDBD79 /* CITableView.m in Sources */ = {isa = PBXBuildFile; fileRef = B604519418EB47AC00FDBD79 /* CITableView.m */; };
+		B604519818EB48A100FDBD79 /* CITableViewCell.m in Sources */ = {isa = PBXBuildFile; fileRef = B604519718EB48A100FDBD79 /* CITableViewCell.m */; };
 		B609800318E28E0400E4FAC5 /* Foundation.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = B609800218E28E0400E4FAC5 /* Foundation.framework */; };
 		B609800518E28E0400E4FAC5 /* CoreGraphics.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = B609800418E28E0400E4FAC5 /* CoreGraphics.framework */; };
 		B609800718E28E0400E4FAC5 /* UIKit.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = B609800618E28E0400E4FAC5 /* UIKit.framework */; };
@@ -47,6 +49,7 @@
 		B67605FE18E2BFDA005637B2 /* CILabel.m in Sources */ = {isa = PBXBuildFile; fileRef = B67605FD18E2BFDA005637B2 /* CILabel.m */; };
 		B676060218E2C1D6005637B2 /* NSString+Copy.m in Sources */ = {isa = PBXBuildFile; fileRef = B676060118E2C1D6005637B2 /* NSString+Copy.m */; };
 		B69A70ED18E3C4490039758C /* CIButton.m in Sources */ = {isa = PBXBuildFile; fileRef = B69A70EC18E3C4490039758C /* CIButton.m */; };
+		B6EF63E918EBCDE800864DDB /* libReachability.a in Frameworks */ = {isa = PBXBuildFile; fileRef = B6EF63E418EBCD4100864DDB /* libReachability.a */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXContainerItemProxy section */
@@ -56,6 +59,27 @@
 			proxyType = 1;
 			remoteGlobalIDString = B6097FFE18E28E0400E4FAC5;
 			remoteInfo = CastIt;
+		};
+		B6EF63E318EBCD4100864DDB /* PBXContainerItemProxy */ = {
+			isa = PBXContainerItemProxy;
+			containerPortal = B6EF63DE18EBCD4000864DDB /* Reachability.xcodeproj */;
+			proxyType = 2;
+			remoteGlobalIDString = B60451E718EBCC0100FDBD79;
+			remoteInfo = Reachability;
+		};
+		B6EF63E518EBCD4100864DDB /* PBXContainerItemProxy */ = {
+			isa = PBXContainerItemProxy;
+			containerPortal = B6EF63DE18EBCD4000864DDB /* Reachability.xcodeproj */;
+			proxyType = 2;
+			remoteGlobalIDString = B60451F718EBCC0100FDBD79;
+			remoteInfo = ReachabilityTests;
+		};
+		B6EF63E718EBCD4900864DDB /* PBXContainerItemProxy */ = {
+			isa = PBXContainerItemProxy;
+			containerPortal = B6EF63DE18EBCD4000864DDB /* Reachability.xcodeproj */;
+			proxyType = 1;
+			remoteGlobalIDString = B60451E618EBCC0100FDBD79;
+			remoteInfo = Reachability;
 		};
 /* End PBXContainerItemProxy section */
 
@@ -71,6 +95,10 @@
 		B604518E18EAB27700FDBD79 /* UIImage+Conversion.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = "UIImage+Conversion.m"; sourceTree = "<group>"; };
 		B604519018EAB56B00FDBD79 /* NSURL+Links.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = "NSURL+Links.h"; sourceTree = "<group>"; };
 		B604519118EAB56B00FDBD79 /* NSURL+Links.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = "NSURL+Links.m"; sourceTree = "<group>"; };
+		B604519318EB47AC00FDBD79 /* CITableView.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = CITableView.h; sourceTree = "<group>"; };
+		B604519418EB47AC00FDBD79 /* CITableView.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = CITableView.m; sourceTree = "<group>"; };
+		B604519618EB48A100FDBD79 /* CITableViewCell.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = CITableViewCell.h; sourceTree = "<group>"; };
+		B604519718EB48A100FDBD79 /* CITableViewCell.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = CITableViewCell.m; sourceTree = "<group>"; };
 		B6097FFF18E28E0400E4FAC5 /* CastIt.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = CastIt.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		B609800218E28E0400E4FAC5 /* Foundation.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = Foundation.framework; path = System/Library/Frameworks/Foundation.framework; sourceTree = SDKROOT; };
 		B609800418E28E0400E4FAC5 /* CoreGraphics.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = CoreGraphics.framework; path = System/Library/Frameworks/CoreGraphics.framework; sourceTree = SDKROOT; };
@@ -122,6 +150,7 @@
 		B676060118E2C1D6005637B2 /* NSString+Copy.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = "NSString+Copy.m"; sourceTree = "<group>"; };
 		B69A70EB18E3C4490039758C /* CIButton.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = CIButton.h; sourceTree = "<group>"; };
 		B69A70EC18E3C4490039758C /* CIButton.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = CIButton.m; sourceTree = "<group>"; };
+		B6EF63DE18EBCD4000864DDB /* Reachability.xcodeproj */ = {isa = PBXFileReference; lastKnownFileType = "wrapper.pb-project"; name = Reachability.xcodeproj; path = Reachability/Reachability.xcodeproj; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -129,6 +158,7 @@
 			isa = PBXFrameworksBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				B6EF63E918EBCDE800864DDB /* libReachability.a in Frameworks */,
 				B609800518E28E0400E4FAC5 /* CoreGraphics.framework in Frameworks */,
 				B609800718E28E0400E4FAC5 /* UIKit.framework in Frameworks */,
 				B609800318E28E0400E4FAC5 /* Foundation.framework in Frameworks */,
@@ -151,6 +181,7 @@
 		B6097FF618E28E0400E4FAC5 = {
 			isa = PBXGroup;
 			children = (
+				B6EF63DE18EBCD4000864DDB /* Reachability.xcodeproj */,
 				B609800818E28E0400E4FAC5 /* CastIt */,
 				B609802118E28E0400E4FAC5 /* CastItTests */,
 				B609800118E28E0400E4FAC5 /* Frameworks */,
@@ -262,6 +293,8 @@
 				B67605D518E29E49005637B2 /* CIHomeView.m */,
 				B67605F918E2BD19005637B2 /* CIContentView.h */,
 				B67605FA18E2BD19005637B2 /* CIContentView.m */,
+				B604519318EB47AC00FDBD79 /* CITableView.h */,
+				B604519418EB47AC00FDBD79 /* CITableView.m */,
 			);
 			name = Views;
 			sourceTree = "<group>";
@@ -324,8 +357,19 @@
 				B67605FD18E2BFDA005637B2 /* CILabel.m */,
 				B69A70EB18E3C4490039758C /* CIButton.h */,
 				B69A70EC18E3C4490039758C /* CIButton.m */,
+				B604519618EB48A100FDBD79 /* CITableViewCell.h */,
+				B604519718EB48A100FDBD79 /* CITableViewCell.m */,
 			);
 			name = "View Objects";
+			sourceTree = "<group>";
+		};
+		B6EF63DF18EBCD4000864DDB /* Products */ = {
+			isa = PBXGroup;
+			children = (
+				B6EF63E418EBCD4100864DDB /* libReachability.a */,
+				B6EF63E618EBCD4100864DDB /* ReachabilityTests.xctest */,
+			);
+			name = Products;
 			sourceTree = "<group>";
 		};
 /* End PBXGroup section */
@@ -342,6 +386,7 @@
 			buildRules = (
 			);
 			dependencies = (
+				B6EF63E818EBCD4900864DDB /* PBXTargetDependency */,
 			);
 			name = CastIt;
 			productName = CastIt;
@@ -390,6 +435,12 @@
 			mainGroup = B6097FF618E28E0400E4FAC5;
 			productRefGroup = B609800018E28E0400E4FAC5 /* Products */;
 			projectDirPath = "";
+			projectReferences = (
+				{
+					ProductGroup = B6EF63DF18EBCD4000864DDB /* Products */;
+					ProjectRef = B6EF63DE18EBCD4000864DDB /* Reachability.xcodeproj */;
+				},
+			);
 			projectRoot = "";
 			targets = (
 				B6097FFE18E28E0400E4FAC5 /* CastIt */,
@@ -397,6 +448,23 @@
 			);
 		};
 /* End PBXProject section */
+
+/* Begin PBXReferenceProxy section */
+		B6EF63E418EBCD4100864DDB /* libReachability.a */ = {
+			isa = PBXReferenceProxy;
+			fileType = archive.ar;
+			path = libReachability.a;
+			remoteRef = B6EF63E318EBCD4100864DDB /* PBXContainerItemProxy */;
+			sourceTree = BUILT_PRODUCTS_DIR;
+		};
+		B6EF63E618EBCD4100864DDB /* ReachabilityTests.xctest */ = {
+			isa = PBXReferenceProxy;
+			fileType = wrapper.cfbundle;
+			path = ReachabilityTests.xctest;
+			remoteRef = B6EF63E518EBCD4100864DDB /* PBXContainerItemProxy */;
+			sourceTree = BUILT_PRODUCTS_DIR;
+		};
+/* End PBXReferenceProxy section */
 
 /* Begin PBXResourcesBuildPhase section */
 		B6097FFD18E28E0400E4FAC5 /* Resources */ = {
@@ -438,9 +506,11 @@
 				B67605DA18E29EF3005637B2 /* UIColor+Conversion.m in Sources */,
 				B69A70ED18E3C4490039758C /* CIButton.m in Sources */,
 				B67605E318E2A5A3005637B2 /* UIFont+Typeface.m in Sources */,
+				B604519518EB47AC00FDBD79 /* CITableView.m in Sources */,
 				B67605FE18E2BFDA005637B2 /* CILabel.m in Sources */,
 				B604519218EAB56B00FDBD79 /* NSURL+Links.m in Sources */,
 				B604518F18EAB27700FDBD79 /* UIImage+Conversion.m in Sources */,
+				B604519818EB48A100FDBD79 /* CITableViewCell.m in Sources */,
 				B67605FB18E2BD19005637B2 /* CIContentView.m in Sources */,
 				B676060218E2C1D6005637B2 /* NSString+Copy.m in Sources */,
 				B609801318E28E0400E4FAC5 /* AppDelegate.m in Sources */,
@@ -471,6 +541,11 @@
 			isa = PBXTargetDependency;
 			target = B6097FFE18E28E0400E4FAC5 /* CastIt */;
 			targetProxy = B609801F18E28E0400E4FAC5 /* PBXContainerItemProxy */;
+		};
+		B6EF63E818EBCD4900864DDB /* PBXTargetDependency */ = {
+			isa = PBXTargetDependency;
+			name = Reachability;
+			targetProxy = B6EF63E718EBCD4900864DDB /* PBXContainerItemProxy */;
 		};
 /* End PBXTargetDependency section */
 
@@ -573,8 +648,14 @@
 				ASSETCATALOG_COMPILER_LAUNCHIMAGE_NAME = LaunchImage;
 				GCC_PRECOMPILE_PREFIX_HEADER = YES;
 				GCC_PREFIX_HEADER = "CastIt/CastIt-Prefix.pch";
+				HEADER_SEARCH_PATHS = (
+					"$(inherited)",
+					/Applications/Xcode.app/Contents/Developer/Toolchains/XcodeDefault.xctoolchain/usr/include,
+					"$(SRCROOT)/Reachability/**",
+				);
 				INFOPLIST_FILE = "CastIt/CastIt-Info.plist";
 				IPHONEOS_DEPLOYMENT_TARGET = 7.1;
+				LIBRARY_SEARCH_PATHS = "";
 				PRODUCT_NAME = "$(TARGET_NAME)";
 				TARGETED_DEVICE_FAMILY = "1,2";
 				WRAPPER_EXTENSION = app;
@@ -588,8 +669,14 @@
 				ASSETCATALOG_COMPILER_LAUNCHIMAGE_NAME = LaunchImage;
 				GCC_PRECOMPILE_PREFIX_HEADER = YES;
 				GCC_PREFIX_HEADER = "CastIt/CastIt-Prefix.pch";
+				HEADER_SEARCH_PATHS = (
+					"$(inherited)",
+					/Applications/Xcode.app/Contents/Developer/Toolchains/XcodeDefault.xctoolchain/usr/include,
+					"$(SRCROOT)/Reachability/**",
+				);
 				INFOPLIST_FILE = "CastIt/CastIt-Info.plist";
 				IPHONEOS_DEPLOYMENT_TARGET = 7.1;
+				LIBRARY_SEARCH_PATHS = "";
 				PRODUCT_NAME = "$(TARGET_NAME)";
 				TARGETED_DEVICE_FAMILY = "1,2";
 				WRAPPER_EXTENSION = app;

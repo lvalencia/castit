@@ -7,6 +7,7 @@
 //
 
 #import "CIContentView.h"
+#import "Reachability.h"
 
 @implementation CIContentHeader
 
@@ -24,7 +25,7 @@
 
 @implementation CIContentView
 
-@synthesize contentHeader, contentType, placeholderContent;
+@synthesize contentHeader, contentType, placeholderContent, tableView;
 
 - (id)initWithFrame:(CGRect)frame
 {
@@ -52,6 +53,31 @@
     }
     
     [placeholderContent applyStyle];
+}
+
+- (IBAction) searchForChromeCasts:(CIButton *)sender{
+    NSLog(@"I'm Searching for Chrome Casts");
+    //Set up the Table View
+    //Set up the Spinning Icon
+    //Fade out the Placeholder and Fade in the table View
+    [UIView animateWithDuration:1.0 animations:^(void) {
+        sender.alpha = 0;
+    }];
+}
+
+- (IBAction) searchForMediaLocations:(CIButton*) sender{
+    NSLog(@"I'm Searching for Media Locations");
+    
+    if ([[Reachability reachabilityForLocalWiFi] currentReachabilityStatus] != ReachableViaWiFi) {
+        //Code to execute if WiFi is not enabled
+        NSLog(@"NOT CONNECTED TO WIFI");
+    }
+     
+    if ([sender buttonStyle] == ciMediaListButton){
+        [UIView animateWithDuration:1.0 animations:^(void) {
+            sender.alpha = 0;
+        }];
+    }
 }
 /*
 // Only override drawRect: if you perform custom drawing.

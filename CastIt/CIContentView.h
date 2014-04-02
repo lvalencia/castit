@@ -9,6 +9,7 @@
 #import "CIView.h"
 #import "CILabel.h"
 #import "CIButton.h"
+#import "CITableView.h"
 
 enum CIContentViewType {
     ciChromeCastView = 1,
@@ -27,6 +28,10 @@ enum CIContentViewType {
 
 @property (nonatomic, strong) IBOutlet CIContentHeader* contentHeader;
 @property (nonatomic, strong) IBOutlet CIButton *placeholderContent;
+@property (nonatomic) CITableView *tableView;
 @property (nonatomic) enum CIContentViewType contentType;
+
+- (IBAction) searchForChromeCasts:(CIButton *)sender;
+- (IBAction) searchForMediaLocations:(CIButton*) sender;
 
 @end
