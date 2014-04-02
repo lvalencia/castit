@@ -35,6 +35,10 @@
     return [[scanner devices] count];
 }
 
+- (GCKDevice *) deviceAtIndex: (NSInteger) index{
+    return [[scanner devices] objectAtIndex:index];
+}
+
 #pragma mark - GCKDeviceScannerListener
 - (void)deviceDidComeOnline:(GCKDevice *)device {
     NSLog(@"device found!!!");

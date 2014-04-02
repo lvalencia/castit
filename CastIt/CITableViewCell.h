@@ -7,7 +7,8 @@
 //
 
 #import <UIKit/UIKit.h>
+#import "CIStyleable.h"
 
-@interface CITableViewCell : UITableViewCell
+@interface CITableViewCell : UITableViewCell<CIStyleable>
 
 @end

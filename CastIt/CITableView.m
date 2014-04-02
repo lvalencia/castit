@@ -7,6 +7,8 @@
 //
 
 #import "CITableView.h"
+#import "CITableViewCell.h"
+#import "NSString+Identifiers.h"
 
 @implementation CITableView
 
@@ -17,6 +19,8 @@
     self = [super initWithFrame:frame];
     if (self) {
         // Initialization code
+        [self setDelegate:self];
+        [self registerClass: [CITableViewCell class] forCellReuseIdentifier:[NSString ciTableViewCellReusableIdentifier]];
     }
     return self;
 }
@@ -24,15 +28,20 @@
 - (void) createDataDelegateWithDataSource:(id) dataSourceObject{
     if (dataSourceDelegate == nil){
         dataSourceDelegate = [[CIDataSourceHandler alloc] initWithDataSourceObject:dataSourceObject];
+        [self setDataSource:dataSourceDelegate];
     }
     else {
         [dataSourceDelegate setDataSourceObject:nil];
         [dataSourceDelegate setDataSourceObject:dataSourceObject];
+        [self setDataSourceDelegate:nil];
+        [self setDataSource:dataSourceDelegate];
     }
 }
 
 - (void) applyStyle {
-    
+    [self setBackgroundColor:[UIColor tableViewBackgroundColor]];
+    [self setSeparatorColor:[UIColor tableSeperatorInsetColor]];
+    [self setSeparatorInset:UIEdgeInsetsZero];
 }
 
 /*

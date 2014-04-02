@@ -10,7 +10,7 @@
 #import "CIDataSourceHandler.h"
 #import "CIStyleable.h"
 
-@interface CITableView : UITableView<CIStyleable>
+@interface CITableView : UITableView<CIStyleable, UITableViewDelegate>
 
 @property (nonatomic, strong) CIDataSourceHandler *dataSourceDelegate;
 

@@ -66,6 +66,7 @@
     if (tableView.superview == nil){
         [tableView setAlpha:0.0];
         [self addSubview:tableView];
+        [tableView reloadData];
         
         [UIView animateWithDuration:0.5 animations:^(void) {
             tableView.alpha = 1;

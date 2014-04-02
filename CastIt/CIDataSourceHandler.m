@@ -49,6 +49,14 @@
         cell = [[CITableViewCell alloc] initWithStyle:UITableViewCellStyleDefault reuseIdentifier:CellIdentifier];
     }
     
+    if ([dataSourceObject isKindOfClass:[CIChromecastFinder class]]){
+        CIChromecastFinder* finder = (CIChromecastFinder *)dataSourceObject;
+        GCKDevice* device = [finder deviceAtIndex:indexPath.row];
+        [cell.textLabel setText:[device friendlyName]];
+    }
+    
+    [cell applyStyle];
+    
     return cell;
 }
 

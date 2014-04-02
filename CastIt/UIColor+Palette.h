@@ -19,6 +19,10 @@
 + (UIColor *) contentSectionTextColor;
 + (UIColor *) contentSectionHighlightedTextColor;
 
++ (UIColor *) tableSeperatorInsetColor;
++ (UIColor *) tableViewBackgroundColor;
++ (UIColor *) highlightedTableCellColor;
+
 + (UIColor *) buttonTextColor;
 + (UIColor *) standardLabelColor;
 

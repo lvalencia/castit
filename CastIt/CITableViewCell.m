@@ -8,6 +8,13 @@
 
 #import "CITableViewCell.h"
 
+@interface CITableViewCell()
+
+- (void) applySelectedStyle;
+- (void) applyUnselectedStyle;
+
+@end
+
 @implementation CITableViewCell
 
 - (id)initWithStyle:(UITableViewCellStyle)style reuseIdentifier:(NSString *)reuseIdentifier
@@ -29,6 +36,24 @@
     [super setSelected:selected animated:animated];
 
     // Configure the view for the selected state
+    [self applyStyle];
+}
+
+- (void) applyStyle{
+    if (self.selected) {
+        [self applySelectedStyle];
+    }
+    else {
+        [self applyUnselectedStyle];
+    }
+}
+- (void) applySelectedStyle {
+    [self.contentView setBackgroundColor:[UIColor highlightedTableCellColor]];
+    [self.textLabel setBackgroundColor:[UIColor highlightedTableCellColor]];
+}
+- (void) applyUnselectedStyle {
+    [self.contentView setBackgroundColor:[UIColor tableViewBackgroundColor]];
+    [self.textLabel setBackgroundColor:[UIColor tableViewBackgroundColor]];
 }
 
 @end

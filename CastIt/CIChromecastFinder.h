@@ -16,5 +16,6 @@
 
 - (void) scanForDevices;
 - (NSInteger) deviceCount;
+- (GCKDevice *)  deviceAtIndex: (NSInteger) index;
 
 @end
