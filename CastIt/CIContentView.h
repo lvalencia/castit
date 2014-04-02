@@ -31,7 +31,4 @@ enum CIContentViewType {
 @property (nonatomic) CITableView *tableView;
 @property (nonatomic) enum CIContentViewType contentType;
 
-- (IBAction) searchForChromeCasts:(CIButton *)sender;
-- (IBAction) searchForMediaLocations:(CIButton*) sender;
-
 @end

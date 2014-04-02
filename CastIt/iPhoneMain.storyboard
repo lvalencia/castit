@@ -56,7 +56,7 @@
                                             <color key="titleShadowColor" white="0.5" alpha="1" colorSpace="calibratedWhite"/>
                                         </state>
                                         <connections>
-                                            <action selector="searchForChromeCasts:" destination="Xp2-Ub-jLK" eventType="touchUpInside" id="xoI-X0-VfS"/>
+                                            <action selector="searchForChromeCasts:" destination="t6D-n6-W2R" eventType="touchUpInside" id="5B7-kk-XeG"/>
                                         </connections>
                                     </button>
                                 </subviews>
@@ -97,7 +97,7 @@
                                                     <color key="titleShadowColor" white="0.5" alpha="1" colorSpace="calibratedWhite"/>
                                                 </state>
                                                 <connections>
-                                                    <action selector="searchForMediaLocations:" destination="fZr-wo-x88" eventType="touchUpInside" id="uTH-MR-DAB"/>
+                                                    <action selector="searchForMediaLocations:" destination="t6D-n6-W2R" eventType="touchUpInside" id="8RA-R7-7OJ"/>
                                                 </connections>
                                             </button>
                                         </subviews>
@@ -115,7 +115,7 @@
                                             <color key="titleShadowColor" white="0.5" alpha="1" colorSpace="calibratedWhite"/>
                                         </state>
                                         <connections>
-                                            <action selector="searchForMediaLocations:" destination="fZr-wo-x88" eventType="touchUpInside" id="thl-de-dVy"/>
+                                            <action selector="searchForMediaLocations:" destination="t6D-n6-W2R" eventType="touchUpInside" id="1lm-xF-Pvb"/>
                                         </connections>
                                     </button>
                                 </subviews>
