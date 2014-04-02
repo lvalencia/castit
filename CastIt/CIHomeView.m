@@ -47,6 +47,14 @@
 - (IBAction) openFAQSectionOfSite:(CIButton *) FAQButton{
     [[UIApplication sharedApplication] openURL:[NSURL FAQURL]];
 }
+
+- (void) perpareViewForChromecastDeviceListing {
+    [chromeCastsView prepareTableForViewing];
+}
+- (void) displayChromecastTable{
+    [chromeCastsView showTable];
+}
+
 /*
 // Only override drawRect: if you perform custom drawing.
 // An empty implementation adversely affects performance during animation.

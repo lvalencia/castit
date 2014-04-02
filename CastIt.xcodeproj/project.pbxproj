@@ -53,6 +53,8 @@
 		B6EF63EC18EBD1B000864DDB /* CIAlertView.m in Sources */ = {isa = PBXBuildFile; fileRef = B6EF63EB18EBD1B000864DDB /* CIAlertView.m */; };
 		B6EF63EE18EBE0B000864DDB /* GoogleCast.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = B6EF63ED18EBE0B000864DDB /* GoogleCast.framework */; };
 		B6EF63F218EBE1B600864DDB /* CIChromecastFinder.m in Sources */ = {isa = PBXBuildFile; fileRef = B6EF63F118EBE1B600864DDB /* CIChromecastFinder.m */; };
+		B6EF63F518EBE97B00864DDB /* CIDataSourceHandler.m in Sources */ = {isa = PBXBuildFile; fileRef = B6EF63F418EBE97B00864DDB /* CIDataSourceHandler.m */; };
+		B6EF63F818EBF06E00864DDB /* NSString+Identifiers.m in Sources */ = {isa = PBXBuildFile; fileRef = B6EF63F718EBF06E00864DDB /* NSString+Identifiers.m */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXContainerItemProxy section */
@@ -159,6 +161,10 @@
 		B6EF63ED18EBE0B000864DDB /* GoogleCast.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; path = GoogleCast.framework; sourceTree = "<group>"; };
 		B6EF63F018EBE1B600864DDB /* CIChromecastFinder.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = CIChromecastFinder.h; sourceTree = "<group>"; };
 		B6EF63F118EBE1B600864DDB /* CIChromecastFinder.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = CIChromecastFinder.m; sourceTree = "<group>"; };
+		B6EF63F318EBE97B00864DDB /* CIDataSourceHandler.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = CIDataSourceHandler.h; sourceTree = "<group>"; };
+		B6EF63F418EBE97B00864DDB /* CIDataSourceHandler.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = CIDataSourceHandler.m; sourceTree = "<group>"; };
+		B6EF63F618EBF06E00864DDB /* NSString+Identifiers.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = "NSString+Identifiers.h"; sourceTree = "<group>"; };
+		B6EF63F718EBF06E00864DDB /* NSString+Identifiers.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = "NSString+Identifiers.m"; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -331,6 +337,8 @@
 				B604518B18EA9CCE00FDBD79 /* UIImage+Assets.m */,
 				B604519018EAB56B00FDBD79 /* NSURL+Links.h */,
 				B604519118EAB56B00FDBD79 /* NSURL+Links.m */,
+				B6EF63F618EBF06E00864DDB /* NSString+Identifiers.h */,
+				B6EF63F718EBF06E00864DDB /* NSString+Identifiers.m */,
 			);
 			name = Categories;
 			sourceTree = "<group>";
@@ -390,6 +398,8 @@
 			children = (
 				B6EF63F018EBE1B600864DDB /* CIChromecastFinder.h */,
 				B6EF63F118EBE1B600864DDB /* CIChromecastFinder.m */,
+				B6EF63F318EBE97B00864DDB /* CIDataSourceHandler.h */,
+				B6EF63F418EBE97B00864DDB /* CIDataSourceHandler.m */,
 			);
 			name = "Data Objects";
 			sourceTree = "<group>";
@@ -541,7 +551,9 @@
 				B604518218E7582900FDBD79 /* CIHomeView+Adjusted.m in Sources */,
 				B67605DD18E29FB5005637B2 /* UIColor+Palette.m in Sources */,
 				B604518C18EA9CCE00FDBD79 /* UIImage+Assets.m in Sources */,
+				B6EF63F518EBE97B00864DDB /* CIDataSourceHandler.m in Sources */,
 				B609800F18E28E0400E4FAC5 /* main.m in Sources */,
+				B6EF63F818EBF06E00864DDB /* NSString+Identifiers.m in Sources */,
 				B6EF63EC18EBD1B000864DDB /* CIAlertView.m in Sources */,
 				B604517F18E7577000FDBD79 /* CIContentView+Adjusted.m in Sources */,
 				B67605C918E29AE8005637B2 /* CIViewController.m in Sources */,

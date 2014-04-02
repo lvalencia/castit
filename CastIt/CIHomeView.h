@@ -20,4 +20,7 @@
 - (IBAction) openSite:(CIButton *) websiteButton;
 - (IBAction) openFAQSectionOfSite:(CIButton *) FAQButton;
 
+- (void) perpareViewForChromecastDeviceListing;
+- (void) displayChromecastTable;
+
 @end

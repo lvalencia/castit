@@ -31,6 +31,9 @@
         didBeginScan = YES;
     }
 }
+- (NSInteger) deviceCount {
+    return [[scanner devices] count];
+}
 
 #pragma mark - GCKDeviceScannerListener
 - (void)deviceDidComeOnline:(GCKDevice *)device {

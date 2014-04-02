@@ -15,5 +15,6 @@
 @property (nonatomic, strong) GCKDeviceScanner *scanner;
 
 - (void) scanForDevices;
+- (NSInteger) deviceCount;
 
 @end

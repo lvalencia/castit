@@ -10,6 +10,8 @@
 
 @implementation CITableView
 
+@synthesize dataSourceDelegate;
+
 - (id)initWithFrame:(CGRect)frame
 {
     self = [super initWithFrame:frame];
@@ -17,6 +19,20 @@
         // Initialization code
     }
     return self;
+}
+
+- (void) createDataDelegateWithDataSource:(id) dataSourceObject{
+    if (dataSourceDelegate == nil){
+        dataSourceDelegate = [[CIDataSourceHandler alloc] initWithDataSourceObject:dataSourceObject];
+    }
+    else {
+        [dataSourceDelegate setDataSourceObject:nil];
+        [dataSourceDelegate setDataSourceObject:dataSourceObject];
+    }
+}
+
+- (void) applyStyle {
+    
 }
 
 /*

@@ -31,4 +31,7 @@ enum CIContentViewType {
 @property (nonatomic) CITableView *tableView;
 @property (nonatomic) enum CIContentViewType contentType;
 
+- (void) prepareTableForViewing;
+- (void) showTable;
+
 @end

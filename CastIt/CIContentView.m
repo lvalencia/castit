@@ -54,6 +54,25 @@
     [placeholderContent applyStyle];
 }
 
+- (void) prepareTableForViewing{
+    if (tableView == nil){
+        CGFloat heightDisplacement = contentHeader.frame.size.height;
+        CGFloat desiredHeight = self.frame.size.height - heightDisplacement;
+        tableView = [[CITableView alloc] initWithFrame:CGRectMake(self.frame.origin.x, heightDisplacement, self.frame.size.width, desiredHeight)];
+    }
+    [tableView applyStyle];
+}
+- (void) showTable {
+    if (tableView.superview == nil){
+        [tableView setAlpha:0.0];
+        [self addSubview:tableView];
+        
+        [UIView animateWithDuration:0.5 animations:^(void) {
+            tableView.alpha = 1;
+        }];
+    }
+}
+
 /*
 // Only override drawRect: if you perform custom drawing.
 // An empty implementation adversely affects performance during animation.

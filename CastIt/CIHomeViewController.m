@@ -54,16 +54,28 @@
         [updateAlert showWithDismissHandler:^(NSInteger selectedIndex, BOOL didCancel){}];
     }
     else {
+        //Set up the Table View
+        CIHomeView *view = (CIHomeView*) [self view];
+        [view perpareViewForChromecastDeviceListing];
+        
         if (chromecastFinder == nil){
             chromecastFinder = [[CIChromecastFinder alloc] init];
+            CIContentView *chromecastContentView = [view chromeCastsView];
+            CITableView *chromecastDeviceListTable = [chromecastContentView tableView];
+            [chromecastDeviceListTable createDataDelegateWithDataSource:chromecastFinder];
         }
+        
         [chromecastFinder scanForDevices];
         
-        //Set up the Table View
         //Set up the Spinning Icon
         //Fade out the Placeholder and Fade in the table View
-        [UIView animateWithDuration:1.0 animations:^(void) {
+        [UIView animateWithDuration:0.5 animations:^(void) {
             sender.alpha = 0;
+        } completion:^(BOOL finished) {
+            if (finished){
+                // Put here the code that you want to execute when the animation finishes
+                [view displayChromecastTable];
+            }
         }];
     }
 }

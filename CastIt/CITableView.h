@@ -7,7 +7,13 @@
 //
 
 #import <UIKit/UIKit.h>
+#import "CIDataSourceHandler.h"
+#import "CIStyleable.h"
 
-@interface CITableView : UITableView
+@interface CITableView : UITableView<CIStyleable>
+
+@property (nonatomic, strong) CIDataSourceHandler *dataSourceDelegate;
+
+- (void) createDataDelegateWithDataSource:(id) dataSourceObject;
 
 @end
