@@ -14,6 +14,7 @@
 - (void) setSelectedChromecastLogo;
 - (void) applyUnselectedStyle;
 - (void) setUnselectedChromecastLogo;
+- (void) startAnimationWithStartDelay:(double)delayInSeconds;
 
 @end
 
@@ -51,6 +52,7 @@
         NSArray *connectingAnimationArray = [UIImage connectingAnimationArray];
         [self.imageView setImage:[connectingAnimationArray objectAtIndex:0]];
         [self.imageView setAnimationDuration:0.8];
+        [self.imageView setAnimationRepeatCount:INFINITY];
         [self.imageView setAnimationImages:connectingAnimationArray];
     }
 
@@ -67,6 +69,7 @@
     [self.textLabel setTextColor:[UIColor selectedTableCellTextColor]];
     [self setSelectedChromecastLogo];
     [self addSubview:chromecastLogo];
+    [self startAnimationWithStartDelay:0.2];
 }
 
 - (void) applyUnselectedStyle {
@@ -75,6 +78,7 @@
     [self.textLabel setTextColor:[UIColor unselectedTabelCellTextColor]];
     [self setUnselectedChromecastLogo];
     [self addSubview:chromecastLogo];
+    [self.imageView stopAnimating];
     [self.imageView setImage:nil];
 }
 
@@ -102,6 +106,12 @@
         [self setChromecastLogo:[[UIImageView alloc] initWithFrame:logoRect]];
         [chromecastLogo setImage:[UIImage chromecastIconUnselected]];
     }
+}
+- (void) startAnimationWithStartDelay:(double)delayInSeconds{
+    dispatch_time_t popTime = dispatch_time(DISPATCH_TIME_NOW, delayInSeconds * NSEC_PER_SEC);
+    dispatch_after(popTime, dispatch_get_main_queue(), ^(void){
+        [self.imageView startAnimating];
+    });
 }
 
 
