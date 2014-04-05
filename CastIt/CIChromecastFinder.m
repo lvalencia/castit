@@ -7,6 +7,7 @@
 //
 
 #import "CIChromecastFinder.h"
+#import "CITableViewCell.h"
 
 @implementation CIChromecastFinder
 
@@ -37,6 +38,16 @@
 
 - (GCKDevice *) deviceAtIndex: (NSInteger) index{
     return [[scanner devices] objectAtIndex:index];
+}
+
+- (void) connectToDeviceWithName:(NSString *) deviceName fromSender:(CITableViewCell *) sender{
+    NSInteger index = [[scanner devices] indexOfObjectPassingTest:^BOOL(id obj, NSUInteger idx, BOOL *stop) {
+        GCKDevice* device = (GCKDevice*) obj;
+        return ([[device friendlyName] isEqualToString:[obj friendlyName]]);
+    }];
+    if (index >= 0 && index < [[scanner devices] count]){
+        [sender indicateStatusConnected];
+    }
 }
 
 #pragma mark - GCKDeviceScannerListener

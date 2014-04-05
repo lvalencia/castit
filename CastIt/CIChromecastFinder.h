@@ -9,6 +9,8 @@
 #import <Foundation/Foundation.h>
 #import <GoogleCast/GoogleCast.h>
 
+@class CITableViewCell;
+
 @interface CIChromecastFinder : NSObject<GCKDeviceScannerListener>{
     BOOL didBeginScan;
 }
@@ -17,5 +19,6 @@
 - (void) scanForDevices;
 - (NSInteger) deviceCount;
 - (GCKDevice *)  deviceAtIndex: (NSInteger) index;
+- (void) connectToDeviceWithName:(NSString *) deviceName fromSender:(CITableViewCell *) sender;
 
 @end

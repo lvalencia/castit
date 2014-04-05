@@ -14,5 +14,8 @@
 }
 
 @property (nonatomic, strong) UIImageView *chromecastLogo;
+@property (nonatomic, strong) NSTimer *connectionTimer;
+
+- (void) indicateStatusConnected;
 
 @end
