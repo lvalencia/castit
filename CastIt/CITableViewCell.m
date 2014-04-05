@@ -7,6 +7,7 @@
 //
 
 #import "CITableViewCell.h"
+#import "CIContentView.h"
 
 @interface CITableViewCell()
 
@@ -14,7 +15,9 @@
 - (void) setSelectedChromecastLogo;
 - (void) applyUnselectedStyle;
 - (void) setUnselectedChromecastLogo;
+- (void) configureAnimationImage;
 - (void) startAnimationWithStartDelay:(double)delayInSeconds;
+- (enum CIContentViewType) contentTypeForTableCell;
 
 @end
 
@@ -47,15 +50,11 @@
 - (void) applyStyle{
     [self.textLabel setFont:[UIFont tableViewCellTypeface]];
     logoRect = CGRectMake(274, 12, 28, 22);
-    
-    if ([self.imageView image] == nil){
-        NSArray *connectingAnimationArray = [UIImage connectingAnimationArray];
-        [self.imageView setImage:[connectingAnimationArray objectAtIndex:0]];
-        [self.imageView setAnimationDuration:0.8];
-        [self.imageView setAnimationRepeatCount:INFINITY];
-        [self.imageView setAnimationImages:connectingAnimationArray];
-    }
 
+    if ([self contentTypeForTableCell] == ciChromeCastView) {
+        [self configureAnimationImage];
+    }
+    
     if (self.selected) {
         [self applySelectedStyle];
     }
@@ -69,7 +68,10 @@
     [self.textLabel setTextColor:[UIColor selectedTableCellTextColor]];
     [self setSelectedChromecastLogo];
     [self addSubview:chromecastLogo];
-    [self startAnimationWithStartDelay:0.2];
+    
+    if ([self contentTypeForTableCell] == ciChromeCastView) {
+        [self startAnimationWithStartDelay:0.2];
+    }
 }
 
 - (void) applyUnselectedStyle {
@@ -78,8 +80,11 @@
     [self.textLabel setTextColor:[UIColor unselectedTabelCellTextColor]];
     [self setUnselectedChromecastLogo];
     [self addSubview:chromecastLogo];
-    [self.imageView stopAnimating];
-    [self.imageView setImage:nil];
+    
+    if ([self contentTypeForTableCell] == ciChromeCastView) {
+        [self.imageView stopAnimating];
+        [self.imageView setImage:nil];
+    }
 }
 
 - (void) setSelectedChromecastLogo{
@@ -107,11 +112,32 @@
         [chromecastLogo setImage:[UIImage chromecastIconUnselected]];
     }
 }
+
+- (void) configureAnimationImage{
+    if ([self.imageView image] == nil){
+        NSArray *connectingAnimationArray = [UIImage connectingAnimationArray];
+        [self.imageView setImage:[connectingAnimationArray objectAtIndex:0]];
+        [self.imageView setAnimationDuration:0.8];
+        [self.imageView setAnimationRepeatCount:INFINITY];
+        [self.imageView setAnimationImages:connectingAnimationArray];
+    }
+}
+
 - (void) startAnimationWithStartDelay:(double)delayInSeconds{
     dispatch_time_t popTime = dispatch_time(DISPATCH_TIME_NOW, delayInSeconds * NSEC_PER_SEC);
     dispatch_after(popTime, dispatch_get_main_queue(), ^(void){
         [self.imageView startAnimating];
     });
+}
+
+- (enum CIContentViewType) contentTypeForTableCell{
+    id view = [self superview];
+    while (![view isKindOfClass:[CIContentView class]]){
+        view = [view superview];
+        if (view == nil)
+            return -1;
+    }
+    return [(CIContentView*)view contentType];
 }
 
 
