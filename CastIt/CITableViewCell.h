@@ -9,6 +9,10 @@
 #import <UIKit/UIKit.h>
 #import "CIStyleable.h"
 
-@interface CITableViewCell : UITableViewCell<CIStyleable>
+@interface CITableViewCell : UITableViewCell<CIStyleable>{
+    CGRect logoRect;
+}
+
+@property (nonatomic, strong) UIImageView *chromecastLogo;
 
 @end

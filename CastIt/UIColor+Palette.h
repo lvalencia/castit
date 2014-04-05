@@ -22,6 +22,8 @@
 + (UIColor *) tableSeperatorInsetColor;
 + (UIColor *) tableViewBackgroundColor;
 + (UIColor *) highlightedTableCellColor;
++ (UIColor *) selectedTableCellTextColor;
++ (UIColor *) unselectedTabelCellTextColor;
 
 + (UIColor *) buttonTextColor;
 + (UIColor *) standardLabelColor;

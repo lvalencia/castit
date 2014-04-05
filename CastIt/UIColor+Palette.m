@@ -21,6 +21,8 @@
 + (UIColor *) tableSeperatorInsetColor  { return [UIColor colorFromHexValue:0xf1dfa9]; }
 + (UIColor *) tableViewBackgroundColor  { return [UIColor colorFromHexValue:0xfff0c1]; }
 + (UIColor *) highlightedTableCellColor { return [UIColor colorFromHexValue:0xfff7dd]; }
++ (UIColor *) selectedTableCellTextColor    { return [UIColor colorFromHexValue:0xc43751]; }
++ (UIColor *) unselectedTabelCellTextColor  { return [UIColor colorFromHexValue:0x6e674f]; }
 
 + (UIColor *) buttonTextColor   { return [UIColor colorFromHexValue:0xffffff]; }
 + (UIColor *) standardLabelColor{ return [UIColor colorFromHexValue:0xffffff]; }

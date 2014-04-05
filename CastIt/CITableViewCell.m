@@ -11,11 +11,15 @@
 @interface CITableViewCell()
 
 - (void) applySelectedStyle;
+- (void) setSelectedChromecastLogo;
 - (void) applyUnselectedStyle;
+- (void) setUnselectedChromecastLogo;
 
 @end
 
 @implementation CITableViewCell
+
+@synthesize chromecastLogo;
 
 - (id)initWithStyle:(UITableViewCellStyle)style reuseIdentifier:(NSString *)reuseIdentifier
 {
@@ -40,6 +44,9 @@
 }
 
 - (void) applyStyle{
+    [self.textLabel setFont:[UIFont tableViewCellTypeface]];
+    logoRect = CGRectMake(274, 12, 28, 22);
+
     if (self.selected) {
         [self applySelectedStyle];
     }
@@ -50,10 +57,44 @@
 - (void) applySelectedStyle {
     [self.contentView setBackgroundColor:[UIColor highlightedTableCellColor]];
     [self.textLabel setBackgroundColor:[UIColor highlightedTableCellColor]];
+    [self.textLabel setTextColor:[UIColor selectedTableCellTextColor]];
+    [self setSelectedChromecastLogo];
+    [self addSubview:chromecastLogo];
 }
+
 - (void) applyUnselectedStyle {
     [self.contentView setBackgroundColor:[UIColor tableViewBackgroundColor]];
     [self.textLabel setBackgroundColor:[UIColor tableViewBackgroundColor]];
+    [self.textLabel setTextColor:[UIColor unselectedTabelCellTextColor]];
+    [self setUnselectedChromecastLogo];
+    [self addSubview:chromecastLogo];
 }
+
+- (void) setSelectedChromecastLogo{
+    if (chromecastLogo == nil){
+        chromecastLogo = [[UIImageView alloc] initWithFrame:logoRect];
+        [chromecastLogo setImage:[UIImage chromecastIconUnselected]];
+    }
+    else {
+        [chromecastLogo removeFromSuperview];
+        chromecastLogo = nil;
+        chromecastLogo = [[UIImageView alloc] initWithFrame:logoRect];
+        [chromecastLogo setImage:[UIImage chromecastIconSelected]];
+    }
+}
+
+- (void) setUnselectedChromecastLogo{
+    if (chromecastLogo == nil){
+        chromecastLogo = [[UIImageView alloc] initWithFrame:logoRect];
+        [chromecastLogo setImage:[UIImage chromecastIconSelected]];
+    }
+    else{
+        [chromecastLogo removeFromSuperview];
+        chromecastLogo = nil;
+        chromecastLogo = [[UIImageView alloc] initWithFrame:logoRect];
+        [chromecastLogo setImage:[UIImage chromecastIconUnselected]];
+    }
+}
+
 
 @end

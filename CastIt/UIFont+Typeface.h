@@ -15,6 +15,7 @@
 + (UIFont *) contentSectionTypeface;
 + (UIFont *) contentSectionHighlightedTypeface;
 + (UIFont *) footerTypeface;
++ (UIFont *) tableViewCellTypeface;
 
 + (void) listSupportedFonts;
 

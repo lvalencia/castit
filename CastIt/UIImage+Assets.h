@@ -12,5 +12,7 @@
 
 + (UIImage *) refresh;
 + (UIImage *) add;
++ (UIImage *) chromecastIconSelected;
++ (UIImage *) chromecastIconUnselected;
 
 @end

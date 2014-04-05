@@ -15,6 +15,7 @@
 + (UIFont *) contentSectionTypeface             { return [UIFont fontWithName:@"OpenSans-Light" size:20.0f]; }
 + (UIFont *) contentSectionHighlightedTypeface  { return [UIFont fontWithName:@"OpenSans-Bold"  size:15.0f]; }
 + (UIFont *) footerTypeface                     { return [UIFont fontWithName:@"OpenSans-Bold"  size:12.0f]; }
++ (UIFont *) tableViewCellTypeface              { return [UIFont fontWithName:@"OpenSans-Light" size:20.0f]; }
 
 + (void) listSupportedFonts {
     for (NSString* family in [UIFont familyNames])

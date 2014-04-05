@@ -9,6 +9,7 @@
 #import "CITableView.h"
 #import "CITableViewCell.h"
 #import "NSString+Identifiers.h"
+#import "CILabel.h"
 
 @implementation CITableView
 
