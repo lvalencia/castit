@@ -46,6 +46,13 @@
 - (void) applyStyle{
     [self.textLabel setFont:[UIFont tableViewCellTypeface]];
     logoRect = CGRectMake(274, 12, 28, 22);
+    
+    if ([self.imageView image] == nil){
+        NSArray *connectingAnimationArray = [UIImage connectingAnimationArray];
+        [self.imageView setImage:[connectingAnimationArray objectAtIndex:0]];
+        [self.imageView setAnimationDuration:0.8];
+        [self.imageView setAnimationImages:connectingAnimationArray];
+    }
 
     if (self.selected) {
         [self applySelectedStyle];
@@ -68,30 +75,31 @@
     [self.textLabel setTextColor:[UIColor unselectedTabelCellTextColor]];
     [self setUnselectedChromecastLogo];
     [self addSubview:chromecastLogo];
+    [self.imageView setImage:nil];
 }
 
 - (void) setSelectedChromecastLogo{
     if (chromecastLogo == nil){
-        chromecastLogo = [[UIImageView alloc] initWithFrame:logoRect];
+        [self setChromecastLogo:[[UIImageView alloc] initWithFrame:logoRect]];
         [chromecastLogo setImage:[UIImage chromecastIconUnselected]];
     }
     else {
         [chromecastLogo removeFromSuperview];
-        chromecastLogo = nil;
-        chromecastLogo = [[UIImageView alloc] initWithFrame:logoRect];
+        [self setChromecastLogo:nil];
+        [self setChromecastLogo:[[UIImageView alloc] initWithFrame:logoRect]];
         [chromecastLogo setImage:[UIImage chromecastIconSelected]];
     }
 }
 
 - (void) setUnselectedChromecastLogo{
     if (chromecastLogo == nil){
-        chromecastLogo = [[UIImageView alloc] initWithFrame:logoRect];
+        [self setChromecastLogo:[[UIImageView alloc] initWithFrame:logoRect]];
         [chromecastLogo setImage:[UIImage chromecastIconSelected]];
     }
     else{
         [chromecastLogo removeFromSuperview];
-        chromecastLogo = nil;
-        chromecastLogo = [[UIImageView alloc] initWithFrame:logoRect];
+        [self setChromecastLogo:nil];
+        [self setChromecastLogo:[[UIImageView alloc] initWithFrame:logoRect]];
         [chromecastLogo setImage:[UIImage chromecastIconUnselected]];
     }
 }

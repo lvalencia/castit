@@ -12,7 +12,9 @@
 
 + (UIImage *) refresh;
 + (UIImage *) add;
++ (UIImage *) checkmark;
 + (UIImage *) chromecastIconSelected;
 + (UIImage *) chromecastIconUnselected;
++ (NSArray *) connectingAnimationArray;
 
 @end
