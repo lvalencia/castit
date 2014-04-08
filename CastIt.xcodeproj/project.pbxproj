@@ -55,6 +55,7 @@
 		B6EF63F218EBE1B600864DDB /* CIChromecastFinder.m in Sources */ = {isa = PBXBuildFile; fileRef = B6EF63F118EBE1B600864DDB /* CIChromecastFinder.m */; };
 		B6EF63F518EBE97B00864DDB /* CIDataSourceHandler.m in Sources */ = {isa = PBXBuildFile; fileRef = B6EF63F418EBE97B00864DDB /* CIDataSourceHandler.m */; };
 		B6EF63F818EBF06E00864DDB /* NSString+Identifiers.m in Sources */ = {isa = PBXBuildFile; fileRef = B6EF63F718EBF06E00864DDB /* NSString+Identifiers.m */; };
+		B6EF63FE18F3CE6700864DDB /* CIChromecastDeviceManager.m in Sources */ = {isa = PBXBuildFile; fileRef = B6EF63FD18F3CE6700864DDB /* CIChromecastDeviceManager.m */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXContainerItemProxy section */
@@ -165,6 +166,9 @@
 		B6EF63F418EBE97B00864DDB /* CIDataSourceHandler.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = CIDataSourceHandler.m; sourceTree = "<group>"; };
 		B6EF63F618EBF06E00864DDB /* NSString+Identifiers.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = "NSString+Identifiers.h"; sourceTree = "<group>"; };
 		B6EF63F718EBF06E00864DDB /* NSString+Identifiers.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = "NSString+Identifiers.m"; sourceTree = "<group>"; };
+		B6EF63FC18F3CE6700864DDB /* CIChromecastDeviceManager.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = CIChromecastDeviceManager.h; sourceTree = "<group>"; };
+		B6EF63FD18F3CE6700864DDB /* CIChromecastDeviceManager.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = CIChromecastDeviceManager.m; sourceTree = "<group>"; };
+		B6EF63FF18F3D2B900864DDB /* CIIndicator.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = CIIndicator.h; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -348,6 +352,7 @@
 			children = (
 				B67605E018E2A0F0005637B2 /* CIStyleable.h */,
 				B604518318E7590700FDBD79 /* CIApplicationConstants.h */,
+				B6EF63FF18F3D2B900864DDB /* CIIndicator.h */,
 			);
 			name = Protocols;
 			sourceTree = "<group>";
@@ -400,6 +405,8 @@
 				B6EF63F118EBE1B600864DDB /* CIChromecastFinder.m */,
 				B6EF63F318EBE97B00864DDB /* CIDataSourceHandler.h */,
 				B6EF63F418EBE97B00864DDB /* CIDataSourceHandler.m */,
+				B6EF63FC18F3CE6700864DDB /* CIChromecastDeviceManager.h */,
+				B6EF63FD18F3CE6700864DDB /* CIChromecastDeviceManager.m */,
 			);
 			name = "Data Objects";
 			sourceTree = "<group>";
@@ -543,6 +550,7 @@
 				B67605FE18E2BFDA005637B2 /* CILabel.m in Sources */,
 				B604519218EAB56B00FDBD79 /* NSURL+Links.m in Sources */,
 				B604518F18EAB27700FDBD79 /* UIImage+Conversion.m in Sources */,
+				B6EF63FE18F3CE6700864DDB /* CIChromecastDeviceManager.m in Sources */,
 				B604519818EB48A100FDBD79 /* CITableViewCell.m in Sources */,
 				B67605FB18E2BD19005637B2 /* CIContentView.m in Sources */,
 				B676060218E2C1D6005637B2 /* NSString+Copy.m in Sources */,

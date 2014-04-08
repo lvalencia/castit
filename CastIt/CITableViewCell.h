@@ -8,14 +8,13 @@
 
 #import <UIKit/UIKit.h>
 #import "CIStyleable.h"
+#import "CIIndicator.h"
 
-@interface CITableViewCell : UITableViewCell<CIStyleable>{
+@interface CITableViewCell : UITableViewCell<CIStyleable, CIIndicator>{
     CGRect logoRect;
 }
 
 @property (nonatomic, strong) UIImageView *chromecastLogo;
 @property (nonatomic, strong) NSTimer *connectionTimer;
-
-- (void) indicateStatusConnected;
 
 @end

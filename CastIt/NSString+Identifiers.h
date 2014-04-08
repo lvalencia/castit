@@ -11,5 +11,6 @@
 @interface NSString (Identifiers)
 
 + (NSString*) ciTableViewCellReusableIdentifier;
++ (NSString*) clientPackageName;
 
 @end

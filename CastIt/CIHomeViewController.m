@@ -7,6 +7,8 @@
 //
 
 #import "CIHomeViewController.h"
+#import "CIChromecastFinder.h"
+#import "CIChromecastDeviceManager.h"
 #import "CIHomeView.h"
 #import "CIButton.h"
 #import "CIAlertView.h"
@@ -18,7 +20,13 @@
 
 @implementation CIHomeViewController
 
-@synthesize chromecastFinder;
+static CIHomeViewController* _instance;
+
+@synthesize chromecastFinder, chromecastManager;
+
++ (CIHomeViewController *) instance{
+    return _instance;
+}
 
 - (id)initWithNibName:(NSString *)nibNameOrNil bundle:(NSBundle *)nibBundleOrNil
 {
@@ -31,6 +39,7 @@
 
 - (void)viewDidLoad
 {
+    _instance = self;
     [super viewDidLoad];
     // Do any additional setup after loading the view.
     CIHomeView *view = (CIHomeView*)[self view];

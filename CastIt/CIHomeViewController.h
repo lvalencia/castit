@@ -7,13 +7,17 @@
 //
 
 #import "CIViewController.h"
-#import "CIChromecastFinder.h"
 
 @class CIButton;
+@class CIChromecastFinder;
+@class CIChromecastDeviceManager;
 
 @interface CIHomeViewController : CIViewController
 
 @property (nonatomic, strong) CIChromecastFinder *chromecastFinder;
+@property (nonatomic, strong) CIChromecastDeviceManager *chromecastManager;
+
++ (CIHomeViewController *) instance;
 
 - (IBAction) searchForChromeCasts:(CIButton *)sender;
 - (IBAction) searchForMediaLocations:(CIButton*) sender;

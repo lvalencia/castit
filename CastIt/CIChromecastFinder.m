@@ -8,6 +8,9 @@
 
 #import "CIChromecastFinder.h"
 #import "CITableViewCell.h"
+#import "CIHomeViewController.h"
+#import "CIChromecastDeviceManager.h"
+#import "NSString+Identifiers.h"
 
 @implementation CIChromecastFinder
 
@@ -46,7 +49,11 @@
         return ([[device friendlyName] isEqualToString:[obj friendlyName]]);
     }];
     if (index >= 0 && index < [[scanner devices] count]){
-        [sender indicateStatusConnected];
+        GCKDevice* device = [[scanner devices] objectAtIndex:index];
+        CIHomeViewController* viewController = [CIHomeViewController instance];
+        CIChromecastDeviceManager *deviceManager = [[CIChromecastDeviceManager alloc] initWithDevice:device clientPackageName:[NSString clientPackageName] connectionIndicator:sender];
+        [viewController setChromecastManager:deviceManager];
+        [deviceManager connect];
     }
 }
 
