@@ -7,6 +7,7 @@
 //
 
 #import "CIChromecastFinder.h"
+#import "CITableView.h"
 #import "CITableViewCell.h"
 #import "CIHomeViewController.h"
 #import "CIChromecastDeviceManager.h"
@@ -16,11 +17,12 @@
 
 @synthesize scanner;
 
-- (id)init
+- (id)initWithTableView:(CITableView *) tableView
 {
     self = [super init];
     if (self) {
         didBeginScan = NO;
+        _tableView = tableView;
     }
     return self;
 }
@@ -60,12 +62,12 @@
 #pragma mark - GCKDeviceScannerListener
 - (void)deviceDidComeOnline:(GCKDevice *)device {
     NSLog(@"device found!!!");
-    //Refresh Table View
+    [_tableView reloadData];
 }
 
 - (void)deviceDidGoOffline:(GCKDevice *)device {
     NSLog(@"device disappeared!!!");
-    //Refresh Table View
+    [_tableView reloadData];
 }
 
 @end

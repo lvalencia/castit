@@ -9,6 +9,7 @@
 #import <UIKit/UIKit.h>
 #import "CIStyleable.h"
 #import "CIIndicator.h"
+#import "CITableView.h"
 
 @interface CITableViewCell : UITableViewCell<CIStyleable, CIIndicator>{
     CGRect logoRect;
@@ -16,5 +17,7 @@
 
 @property (nonatomic, strong) UIImageView *chromecastLogo;
 @property (nonatomic, strong) NSTimer *connectionTimer;
+
+- (CITableView *) tableViewForTableViewCell;
 
 @end

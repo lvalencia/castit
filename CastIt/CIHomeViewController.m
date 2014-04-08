@@ -68,9 +68,9 @@ static CIHomeViewController* _instance;
         [view perpareViewForChromecastDeviceListing];
         
         if (chromecastFinder == nil){
-            chromecastFinder = [[CIChromecastFinder alloc] init];
             CIContentView *chromecastContentView = [view chromeCastsView];
             CITableView *chromecastDeviceListTable = [chromecastContentView tableView];
+            chromecastFinder = [[CIChromecastFinder alloc] initWithTableView:chromecastDeviceListTable];
             [chromecastDeviceListTable createDataDelegateWithDataSource:chromecastFinder];
         }
         

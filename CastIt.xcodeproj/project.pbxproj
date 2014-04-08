@@ -351,8 +351,8 @@
 			isa = PBXGroup;
 			children = (
 				B67605E018E2A0F0005637B2 /* CIStyleable.h */,
-				B604518318E7590700FDBD79 /* CIApplicationConstants.h */,
 				B6EF63FF18F3D2B900864DDB /* CIIndicator.h */,
+				B604518318E7590700FDBD79 /* CIApplicationConstants.h */,
 			);
 			name = Protocols;
 			sourceTree = "<group>";

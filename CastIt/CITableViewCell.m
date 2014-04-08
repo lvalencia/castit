@@ -162,13 +162,17 @@
     return [(CIContentView*)view contentType];
 }
 
-- (CIChromecastFinder *) getFinderForTableCell{
+- (CITableView *) tableViewForTableViewCell{
     id view = [self superview];
     
     while (view && [view isKindOfClass:[CITableView class]] == NO) {
         view = [view superview];
     }
-    return (CIChromecastFinder *)[(CIDataSourceHandler *)[(CITableView *) view dataSourceDelegate] dataSourceObject];
+    return (CITableView *) view;
+}
+
+- (CIChromecastFinder *) getFinderForTableCell{
+    return (CIChromecastFinder *)[(CIDataSourceHandler *)[[self tableViewForTableViewCell] dataSourceDelegate] dataSourceObject];
 }
 
 - (void) stopConnectionTimer
