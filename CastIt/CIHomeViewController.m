@@ -8,6 +8,7 @@
 
 #import "CIHomeViewController.h"
 #import "CIChromecastFinder.h"
+#import "CIMediaDeviceFinder.h"
 #import "CIChromecastDeviceManager.h"
 #import "CIHomeView.h"
 #import "CIButton.h"
@@ -22,7 +23,7 @@
 
 static CIHomeViewController* _instance;
 
-@synthesize chromecastFinder, chromecastManager;
+@synthesize chromecastFinder, chromecastManager, mediaListFinder;
 
 + (CIHomeViewController *) instance{
     return _instance;
@@ -101,6 +102,11 @@ static CIHomeViewController* _instance;
         [updateAlert showWithDismissHandler:^(NSInteger selectedIndex, BOOL didCancel){}];
     }
     else {
+        if (mediaListFinder == nil){
+            mediaListFinder = [[CIMediaDeviceFinder alloc] init];
+            [mediaListFinder startScan];
+        }
+        
         if ([sender buttonStyle] == ciMediaListButton){
             [UIView animateWithDuration:1.0 animations:^(void) {
                 sender.alpha = 0;

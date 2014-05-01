@@ -20,7 +20,7 @@
 - (UIColor *) colorByChangingAlphaTo:(CGFloat)newAlpha {
     
 	CGFloat *oldComponents = (CGFloat *)CGColorGetComponents([self CGColor]);
-	int numComponents = CGColorGetNumberOfComponents([self CGColor]);
+	int numComponents = (int)CGColorGetNumberOfComponents([self CGColor]);
 	CGFloat newComponents[4];
     
 	switch (numComponents)

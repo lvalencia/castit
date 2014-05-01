@@ -56,6 +56,7 @@
 		B6EF63F518EBE97B00864DDB /* CIDataSourceHandler.m in Sources */ = {isa = PBXBuildFile; fileRef = B6EF63F418EBE97B00864DDB /* CIDataSourceHandler.m */; };
 		B6EF63F818EBF06E00864DDB /* NSString+Identifiers.m in Sources */ = {isa = PBXBuildFile; fileRef = B6EF63F718EBF06E00864DDB /* NSString+Identifiers.m */; };
 		B6EF63FE18F3CE6700864DDB /* CIChromecastDeviceManager.m in Sources */ = {isa = PBXBuildFile; fileRef = B6EF63FD18F3CE6700864DDB /* CIChromecastDeviceManager.m */; };
+		B6EF640218F3DC6900864DDB /* CIMediaDeviceFinder.m in Sources */ = {isa = PBXBuildFile; fileRef = B6EF640118F3DC6900864DDB /* CIMediaDeviceFinder.m */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXContainerItemProxy section */
@@ -169,6 +170,8 @@
 		B6EF63FC18F3CE6700864DDB /* CIChromecastDeviceManager.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = CIChromecastDeviceManager.h; sourceTree = "<group>"; };
 		B6EF63FD18F3CE6700864DDB /* CIChromecastDeviceManager.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = CIChromecastDeviceManager.m; sourceTree = "<group>"; };
 		B6EF63FF18F3D2B900864DDB /* CIIndicator.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = CIIndicator.h; sourceTree = "<group>"; };
+		B6EF640018F3DC6900864DDB /* CIMediaDeviceFinder.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = CIMediaDeviceFinder.h; sourceTree = "<group>"; };
+		B6EF640118F3DC6900864DDB /* CIMediaDeviceFinder.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = CIMediaDeviceFinder.m; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -407,6 +410,8 @@
 				B6EF63F418EBE97B00864DDB /* CIDataSourceHandler.m */,
 				B6EF63FC18F3CE6700864DDB /* CIChromecastDeviceManager.h */,
 				B6EF63FD18F3CE6700864DDB /* CIChromecastDeviceManager.m */,
+				B6EF640018F3DC6900864DDB /* CIMediaDeviceFinder.h */,
+				B6EF640118F3DC6900864DDB /* CIMediaDeviceFinder.m */,
 			);
 			name = "Data Objects";
 			sourceTree = "<group>";
@@ -459,6 +464,9 @@
 				LastUpgradeCheck = 0510;
 				ORGANIZATIONNAME = "Luis Valencia";
 				TargetAttributes = {
+					B6097FFE18E28E0400E4FAC5 = {
+						DevelopmentTeam = 5Z9WMAKSVE;
+					};
 					B609801918E28E0400E4FAC5 = {
 						TestTargetID = B6097FFE18E28E0400E4FAC5;
 					};
@@ -562,6 +570,7 @@
 				B6EF63F518EBE97B00864DDB /* CIDataSourceHandler.m in Sources */,
 				B609800F18E28E0400E4FAC5 /* main.m in Sources */,
 				B6EF63F818EBF06E00864DDB /* NSString+Identifiers.m in Sources */,
+				B6EF640218F3DC6900864DDB /* CIMediaDeviceFinder.m in Sources */,
 				B6EF63EC18EBD1B000864DDB /* CIAlertView.m in Sources */,
 				B604517F18E7577000FDBD79 /* CIContentView+Adjusted.m in Sources */,
 				B67605C918E29AE8005637B2 /* CIViewController.m in Sources */,
@@ -690,6 +699,8 @@
 			buildSettings = {
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
 				ASSETCATALOG_COMPILER_LAUNCHIMAGE_NAME = LaunchImage;
+				CODE_SIGN_IDENTITY = "iPhone Developer";
+				"CODE_SIGN_IDENTITY[sdk=iphoneos*]" = "iPhone Developer";
 				FRAMEWORK_SEARCH_PATHS = (
 					"$(inherited)",
 					"$(PROJECT_DIR)",
@@ -706,6 +717,7 @@
 				LIBRARY_SEARCH_PATHS = "";
 				OTHER_LDFLAGS = "-ObjC";
 				PRODUCT_NAME = "$(TARGET_NAME)";
+				PROVISIONING_PROFILE = "";
 				TARGETED_DEVICE_FAMILY = "1,2";
 				WRAPPER_EXTENSION = app;
 			};
@@ -716,6 +728,8 @@
 			buildSettings = {
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
 				ASSETCATALOG_COMPILER_LAUNCHIMAGE_NAME = LaunchImage;
+				CODE_SIGN_IDENTITY = "iPhone Developer";
+				"CODE_SIGN_IDENTITY[sdk=iphoneos*]" = "iPhone Developer";
 				FRAMEWORK_SEARCH_PATHS = (
 					"$(inherited)",
 					"$(PROJECT_DIR)",
@@ -732,6 +746,7 @@
 				LIBRARY_SEARCH_PATHS = "";
 				OTHER_LDFLAGS = "-ObjC";
 				PRODUCT_NAME = "$(TARGET_NAME)";
+				PROVISIONING_PROFILE = "";
 				TARGETED_DEVICE_FAMILY = "1,2";
 				WRAPPER_EXTENSION = app;
 			};

@@ -10,12 +10,14 @@
 
 @class CIButton;
 @class CIChromecastFinder;
+@class CIMediaDeviceFinder;
 @class CIChromecastDeviceManager;
 
 @interface CIHomeViewController : CIViewController
 
 @property (nonatomic, strong) CIChromecastFinder *chromecastFinder;
 @property (nonatomic, strong) CIChromecastDeviceManager *chromecastManager;
+@property (nonatomic, strong) CIMediaDeviceFinder *mediaListFinder;
 
 + (CIHomeViewController *) instance;
 
