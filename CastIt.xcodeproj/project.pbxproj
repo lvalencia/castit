@@ -49,6 +49,7 @@
 		B67605FE18E2BFDA005637B2 /* CILabel.m in Sources */ = {isa = PBXBuildFile; fileRef = B67605FD18E2BFDA005637B2 /* CILabel.m */; };
 		B676060218E2C1D6005637B2 /* NSString+Copy.m in Sources */ = {isa = PBXBuildFile; fileRef = B676060118E2C1D6005637B2 /* NSString+Copy.m */; };
 		B69A70ED18E3C4490039758C /* CIButton.m in Sources */ = {isa = PBXBuildFile; fileRef = B69A70EC18E3C4490039758C /* CIButton.m */; };
+		B6D157CC19935487002A6FDB /* CINetService.m in Sources */ = {isa = PBXBuildFile; fileRef = B6D157CB19935487002A6FDB /* CINetService.m */; };
 		B6EF63E918EBCDE800864DDB /* libReachability.a in Frameworks */ = {isa = PBXBuildFile; fileRef = B6EF63E418EBCD4100864DDB /* libReachability.a */; };
 		B6EF63EC18EBD1B000864DDB /* CIAlertView.m in Sources */ = {isa = PBXBuildFile; fileRef = B6EF63EB18EBD1B000864DDB /* CIAlertView.m */; };
 		B6EF63EE18EBE0B000864DDB /* GoogleCast.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = B6EF63ED18EBE0B000864DDB /* GoogleCast.framework */; };
@@ -157,6 +158,8 @@
 		B676060118E2C1D6005637B2 /* NSString+Copy.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = "NSString+Copy.m"; sourceTree = "<group>"; };
 		B69A70EB18E3C4490039758C /* CIButton.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = CIButton.h; sourceTree = "<group>"; };
 		B69A70EC18E3C4490039758C /* CIButton.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = CIButton.m; sourceTree = "<group>"; };
+		B6D157CA19935487002A6FDB /* CINetService.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = CINetService.h; sourceTree = "<group>"; };
+		B6D157CB19935487002A6FDB /* CINetService.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = CINetService.m; sourceTree = "<group>"; };
 		B6EF63DE18EBCD4000864DDB /* Reachability.xcodeproj */ = {isa = PBXFileReference; lastKnownFileType = "wrapper.pb-project"; name = Reachability.xcodeproj; path = Reachability/Reachability.xcodeproj; sourceTree = "<group>"; };
 		B6EF63EA18EBD1B000864DDB /* CIAlertView.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = CIAlertView.h; sourceTree = "<group>"; };
 		B6EF63EB18EBD1B000864DDB /* CIAlertView.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = CIAlertView.m; sourceTree = "<group>"; };
@@ -412,6 +415,8 @@
 				B6EF63FD18F3CE6700864DDB /* CIChromecastDeviceManager.m */,
 				B6EF640018F3DC6900864DDB /* CIMediaDeviceFinder.h */,
 				B6EF640118F3DC6900864DDB /* CIMediaDeviceFinder.m */,
+				B6D157CA19935487002A6FDB /* CINetService.h */,
+				B6D157CB19935487002A6FDB /* CINetService.m */,
 			);
 			name = "Data Objects";
 			sourceTree = "<group>";
@@ -575,6 +580,7 @@
 				B604517F18E7577000FDBD79 /* CIContentView+Adjusted.m in Sources */,
 				B67605C918E29AE8005637B2 /* CIViewController.m in Sources */,
 				B67605D318E29E35005637B2 /* CIView.m in Sources */,
+				B6D157CC19935487002A6FDB /* CINetService.m in Sources */,
 				B67605D618E29E49005637B2 /* CIHomeView.m in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;

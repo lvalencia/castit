@@ -8,12 +8,20 @@
 
 #import <Foundation/Foundation.h>
 
-@interface CIMediaDeviceFinder : NSObject<NSNetServiceBrowserDelegate>{
+@class CITableView;
+@class CITableViewCell;
+@class CINetService;
+
+@interface CIMediaDeviceFinder : NSObject<NSNetServiceBrowserDelegate, NSNetServiceDelegate>{
     NSString *_domain;
+    CITableView *_tableView;
+    BOOL _firstRoundDiscovery;
 }
 
 @property (nonatomic, strong) NSNetServiceBrowser* scanner;
+@property (nonatomic, retain) NSMutableArray *servicesFound;
 
+- (id) initWithTableView: (CITableView *) tableView;
 - (void) startScan;
 
 @end

@@ -66,10 +66,10 @@ static CIHomeViewController* _instance;
     else {
         //Set up the Table View
         CIHomeView *view = (CIHomeView*) [self view];
-        [view perpareViewForChromecastDeviceListing];
+        [view prepareViewForChromecastDeviceListing];
         
         if (chromecastFinder == nil){
-            CIContentView *chromecastContentView = [view chromeCastsView];
+            CIContentView *chromecastContentView = [view chromecastsView];
             CITableView *chromecastDeviceListTable = [chromecastContentView tableView];
             chromecastFinder = [[CIChromecastFinder alloc] initWithTableView:chromecastDeviceListTable];
             [chromecastDeviceListTable createDataDelegateWithDataSource:chromecastFinder];
@@ -102,8 +102,16 @@ static CIHomeViewController* _instance;
         [updateAlert showWithDismissHandler:^(NSInteger selectedIndex, BOOL didCancel){}];
     }
     else {
+        //Set up the Table View
+        CIHomeView *view = (CIHomeView *) [self view];
+        [view prepareViewForMediaListing];
+        
         if (mediaListFinder == nil){
-            mediaListFinder = [[CIMediaDeviceFinder alloc] init];
+            CIContentView *mediaListContentView = [view mediaLocationsView];
+            CITableView* mediaListContentTable = [mediaListContentView tableView];
+            
+            mediaListFinder = [[CIMediaDeviceFinder alloc] initWithTableView:mediaListContentTable];
+            [mediaListContentTable createDataDelegateWithDataSource:mediaListFinder];
             [mediaListFinder startScan];
         }
         

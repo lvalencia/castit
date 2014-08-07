@@ -12,7 +12,7 @@
 @implementation CIHomeView
 
 @synthesize castItHeader;
-@synthesize chromeCastsView, mediaLocationsView;
+@synthesize chromecastsView, mediaLocationsView;
 @synthesize website, FAQ;
 
 - (id)initWithFrame:(CGRect)frame
@@ -28,8 +28,8 @@
     [self setBackgroundColor:[UIColor mainBackgroundColor]];
     [castItHeader setBackgroundColor:[UIColor clearColor]];
     
-    [chromeCastsView setContentType:ciChromeCastView];
-    [chromeCastsView applyStyle];
+    [chromecastsView setContentType:ciChromeCastView];
+    [chromecastsView applyStyle];
     
     [mediaLocationsView setContentType:ciMediaListView];
     [mediaLocationsView applyStyle];
@@ -48,11 +48,18 @@
     [[UIApplication sharedApplication] openURL:[NSURL FAQURL]];
 }
 
-- (void) perpareViewForChromecastDeviceListing {
-    [chromeCastsView prepareTableForViewing];
+- (void) prepareViewForChromecastDeviceListing {
+    [chromecastsView prepareTableForViewing];
 }
 - (void) displayChromecastTable{
-    [chromeCastsView showTable];
+    [chromecastsView showTable];
+}
+
+- (void) prepareViewForMediaListing{
+    [mediaLocationsView prepareTableForViewing];
+}
+- (void) displayMediaListTable{
+    [mediaLocationsView showTable];
 }
 
 /*

@@ -12,7 +12,7 @@
 @interface CIHomeView : CIView<CIStyleable>
 
 @property (nonatomic, strong) IBOutlet UIImageView *castItHeader;
-@property (nonatomic, strong) IBOutlet CIContentView *chromeCastsView;
+@property (nonatomic, strong) IBOutlet CIContentView *chromecastsView;
 @property (nonatomic, strong) IBOutlet CIContentView *mediaLocationsView;
 @property (nonatomic, strong) IBOutlet CIButton *website;
 @property (nonatomic, strong) IBOutlet CIButton *FAQ;
@@ -20,7 +20,10 @@
 - (IBAction) openSite:(CIButton *) websiteButton;
 - (IBAction) openFAQSectionOfSite:(CIButton *) FAQButton;
 
-- (void) perpareViewForChromecastDeviceListing;
+- (void) prepareViewForChromecastDeviceListing;
 - (void) displayChromecastTable;
+
+- (void) prepareViewForMediaListing;
+- (void) displayMediaListTable;
 
 @end
