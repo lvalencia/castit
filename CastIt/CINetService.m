@@ -10,6 +10,8 @@
 
 @implementation CINetService
 @synthesize wasDiscoveredByDomainBrowse;
+@synthesize ranResolve;
+@synthesize successfullyResolved;
 
 - (id) initWithService:(NSNetService *)service didDiscoverByDomainBrowse:(BOOL) discoveryMethodWasDomainBrowsing {
     self = [super initWithDomain:[service domain] type:[service type] name:[service name]];
@@ -17,6 +19,9 @@
         wasDiscoveredByDomainBrowse = discoveryMethodWasDomainBrowsing;
     }
     return self;
+}
+- (BOOL) readyForCommunication{
+    return ranResolve && successfullyResolved;
 }
 
 @end

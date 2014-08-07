@@ -8,6 +8,7 @@
 
 #import "CIDataSourceHandler.h"
 #import "CIChromecastFinder.h"
+#import "CIMediaDeviceFinder.h"
 #import "CITableViewCell.h"
 #import "NSString+Identifiers.h"
 
@@ -38,6 +39,10 @@
         CIChromecastFinder* finder = (CIChromecastFinder *)dataSourceObject;
         rows = [finder deviceCount];
     }
+    else if ([dataSourceObject isKindOfClass:[CIMediaDeviceFinder class]]){
+        CIMediaDeviceFinder* finder = (CIMediaDeviceFinder *)dataSourceObject;
+        rows = [finder deviceCount];
+    }
     return rows;
 }
 
@@ -54,7 +59,11 @@
         GCKDevice* device = [finder deviceAtIndex:indexPath.row];
         [cell.textLabel setText:[device friendlyName]];
     }
-    
+    else if ([dataSourceObject isKindOfClass:[CIMediaDeviceFinder class]]){
+        CIMediaDeviceFinder* finder = (CIMediaDeviceFinder *) dataSourceObject;
+        NSNetService* service = [finder deviceAtIndex:indexPath.row];
+        [cell.textLabel setText:[service name]];
+    }
     [cell applyStyle];
     
     return cell;

@@ -15,5 +15,6 @@
 @property (atomic) BOOL successfullyResolved;
 
 - (id) initWithService:(NSNetService *)service didDiscoverByDomainBrowse:(BOOL) discoveryMethodWasDomainBrowsing;
+- (BOOL) readyForCommunication;
 
 @end

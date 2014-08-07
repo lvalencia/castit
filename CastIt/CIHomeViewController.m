@@ -109,15 +109,19 @@ static CIHomeViewController* _instance;
         if (mediaListFinder == nil){
             CIContentView *mediaListContentView = [view mediaLocationsView];
             CITableView* mediaListContentTable = [mediaListContentView tableView];
-            
             mediaListFinder = [[CIMediaDeviceFinder alloc] initWithTableView:mediaListContentTable];
             [mediaListContentTable createDataDelegateWithDataSource:mediaListFinder];
-            [mediaListFinder startScan];
         }
-        
+        [mediaListFinder startScan];
+
         if ([sender buttonStyle] == ciMediaListButton){
             [UIView animateWithDuration:1.0 animations:^(void) {
                 sender.alpha = 0;
+            } completion:^(BOOL finished) {
+                if (finished){
+                    // Put here the code that you want to execute when the animation finishes
+                    [view displayMediaListTable];
+                }
             }];
         }
     }

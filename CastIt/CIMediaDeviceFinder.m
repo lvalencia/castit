@@ -8,11 +8,13 @@
 
 #import "CIMediaDeviceFinder.h"
 #import "CINetService.h"
+#import "CITableView.h"
 #include "arpa/inet.h"
 
 @interface CIMediaDeviceFinder ()
 
 - (CINetService *) firstServiceToNotBeResolved;
+- (NSArray *) devicesReadyForConnection;
 
 @end
 
@@ -35,15 +37,35 @@
         scanner = [[NSNetServiceBrowser alloc] init];
         [scanner setDelegate:self];
         [scanner searchForBrowsableDomains];
-        //[scanner searchForRegistrationDomains];
+    }
+    else {
+        [scanner stop];
+        [scanner searchForBrowsableDomains];
     }
 }
+
+- (NSInteger) deviceCount{
+    return [[self devicesReadyForConnection] count];
+}
+
+- (NSNetService *) deviceAtIndex: (NSInteger) index{
+    return [[self devicesReadyForConnection] objectAtIndex:index];
+}
+
+#pragma mark - Private Methods
 
 - (CINetService *) firstServiceToNotBeResolved{
     for(CINetService* service in servicesFound){
         if (![service ranResolve]){ return service; }
     }
     return nil;
+}
+- (NSArray *) devicesReadyForConnection{
+    NSPredicate* p = [NSPredicate predicateWithBlock:^BOOL(id evaluatedObject, NSDictionary* bindings){
+        return [(CINetService *)evaluatedObject readyForCommunication];
+    }];
+    NSArray* hold= [servicesFound filteredArrayUsingPredicate:p];
+    return hold;
 }
 
 #pragma mark - NSNetServiceBrowserDelegate Methods
@@ -75,17 +97,7 @@
     if (moreServicesComing == NO){
         [scanner stop];
         _firstRoundDiscovery = NO;
-         //Trigger Update UI
     }
-
-   // CINetService* temp = [[CINetService alloc] initWithService:netService];
-    //[netService setDelegate:self];
-    //[netService resolveWithTimeout:5.0];
-   // [servicesFound addObject:temp];
-    //Extend NSNetService
-    //Init from the Returned Service
-    //Create BackLink it to This for When it Resolves 
-    //Need to Set up a Delete, Resolve IP, Connect with it, then Open Stream (input/output) to send command and start poking around
 
     /*
     NSInputStream *istream = nil;
@@ -123,7 +135,7 @@
             NSString* actualServiceType = [NSString stringWithFormat:@"%@.%@", [service name], [[service type] stringByReplacingOccurrencesOfString:@"local." withString:@""]];
             [scanner searchForServicesOfType:actualServiceType inDomain:_domain];
         }
-        else {
+        else if (![service ranResolve]) {
             while(service){
                 [service setRanResolve:YES];
                 [service setDelegate:self];
@@ -139,12 +151,16 @@
     NSLog(@"RESOLVING SERVICE OF TYPE %@ WITH NAME %@ AND DOMAIN %@", [sender type], [sender name], [sender domain]);
 }
 - (void)netServiceDidResolveAddress:(CINetService *)sender{
+    [sender setSuccessfullyResolved:YES];
     NSLog(@"SERVICE THAT RESOLVED IS OF TYPE %@ WITH NAME %@ AND DOMAIN %@", [sender type], [sender name], [sender domain]);
     NSData* address = [[sender addresses] objectAtIndex:0];
     struct sockaddr_in* socketAddress = (struct sockaddr_in *) [address bytes];
     NSString* ipString = [NSString stringWithFormat: @"%s", inet_ntoa (socketAddress->sin_addr)];
     int port = socketAddress->sin_port;
     NSLog(@"SERVICE IS FOUND ON IP %@ PORT %d",ipString,port);
+    
+    //Update UI
+    [_tableView reloadData];
 }
 - (void)netService:(CINetService *)sender didNotResolve:(NSDictionary *)errorDict{
     NSLog(@"DID NOT RESOLVE");

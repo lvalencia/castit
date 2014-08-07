@@ -23,5 +23,7 @@
 
 - (id) initWithTableView: (CITableView *) tableView;
 - (void) startScan;
+- (NSInteger) deviceCount;
+- (NSNetService *) deviceAtIndex: (NSInteger) index;
 
 @end
