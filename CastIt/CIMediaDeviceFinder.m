@@ -8,6 +8,7 @@
 
 #import "CIMediaDeviceFinder.h"
 #import "CINetService.h"
+#include "arpa/inet.h"
 
 @interface CIMediaDeviceFinder ()
 
@@ -134,31 +135,24 @@
 }
 
 #pragma mark - NSNetServiceDelegate Methods
-- (void)netServiceWillPublish:(NSNetService *)sender{
-    NSLog(@"WILL PUBLISH");
-}
-- (void)netService:(NSNetService *)sender didNotPublish:(NSDictionary *)errorDict{
-    NSLog(@"DID NOT PUBLISH");
-}
-- (void)netServiceDidPublish:(NSNetService *)sender{
-    NSLog(@"DID PUBLISH");
-}
-- (void)netServiceWillResolve:(NSNetService *)sender{
+- (void)netServiceWillResolve:(CINetService *)sender{
     NSLog(@"RESOLVING SERVICE OF TYPE %@ WITH NAME %@ AND DOMAIN %@", [sender type], [sender name], [sender domain]);
 }
-- (void)netService:(NSNetService *)sender didNotResolve:(NSDictionary *)errorDict{
+- (void)netServiceDidResolveAddress:(CINetService *)sender{
+    NSLog(@"SERVICE THAT RESOLVED IS OF TYPE %@ WITH NAME %@ AND DOMAIN %@", [sender type], [sender name], [sender domain]);
+    NSData* address = [[sender addresses] objectAtIndex:0];
+    struct sockaddr_in* socketAddress = (struct sockaddr_in *) [address bytes];
+    NSString* ipString = [NSString stringWithFormat: @"%s", inet_ntoa (socketAddress->sin_addr)];
+    int port = socketAddress->sin_port;
+    NSLog(@"SERVICE IS FOUND ON IP %@ PORT %d",ipString,port);
+}
+- (void)netService:(CINetService *)sender didNotResolve:(NSDictionary *)errorDict{
     NSLog(@"DID NOT RESOLVE");
     NSLog(@"Dictionary: %@", [errorDict description]);
 }
-- (void)netService:(NSNetService *)sender didUpdateTXTRecordData:(NSData *)data{
-    NSLog(@"UPDATED TXT RECORD DATA");
-}
-- (void)netServiceDidStop:(NSNetService *)sender{
+- (void)netServiceDidStop:(CINetService *)sender{
     NSLog(@"SERVICE THAT STOPPED IS OF TYPE %@ WITH NAME %@ AND DOMAIN %@", [sender type], [sender name], [sender domain]);
-
-}
-- (void)netServiceDidResolveAddress:(NSNetService *)sender{
-    NSLog(@"SERVICE THAT RESOLVED IS OF TYPE %@ WITH NAME %@ AND DOMAIN %@", [sender type], [sender name], [sender domain]);
+    
 }
 
 @end
