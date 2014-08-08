@@ -15,5 +15,4 @@
 + (NSArray *) nixProtocols;
 + (NSArray *) macProtocols;
 + (NSArray *) allProtocols;
-+ (NSArray *) arrayFromArrays:(NSArray *)otherArrays,...;
 @end

@@ -7,6 +7,7 @@
 //
 
 #import "NSArray+FileSharingProtocols.h"
+#import "NSArray+Utils.h"
 
 @implementation NSArray (FileSharingProtocols)
 
@@ -24,17 +25,6 @@
 }
 + (NSArray *) allProtocols {
     return [NSArray arrayFromArrays:[self windowsProtocols], [self netwareProtocols], [self nixProtocols], [self macProtocols], nil];
-}
-+ (NSArray *) arrayFromArrays:(NSArray *)otherArrays,... {
-    NSMutableArray* result = [[NSMutableArray alloc] initWithArray:otherArrays];
-    va_list args;
-    va_start(args, otherArrays);
-    NSArray *next;
-    while((next = va_arg(args, NSArray*))) {
-        [result addObjectsFromArray:next];
-    }
-    va_end(args);
-    return result;
 }
 
 @end
