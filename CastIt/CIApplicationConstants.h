@@ -9,3 +9,5 @@
 #import <Foundation/Foundation.h>
 
 #define contentViewiPhone5Offset 25
+
+#define MAX_SERVICE_SEARCH_TIME 0.5

@@ -9,14 +9,13 @@
 #import "CINetService.h"
 
 @implementation CINetService
-@synthesize wasDiscoveredByDomainBrowse;
+
 @synthesize ranResolve;
 @synthesize successfullyResolved;
 
-- (id) initWithService:(NSNetService *)service didDiscoverByDomainBrowse:(BOOL) discoveryMethodWasDomainBrowsing {
+- (id) initWithService:(NSNetService *)service{
     self = [super initWithDomain:[service domain] type:[service type] name:[service name]];
     if (self) {
-        wasDiscoveredByDomainBrowse = discoveryMethodWasDomainBrowsing;
     }
     return self;
 }

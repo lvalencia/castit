@@ -15,7 +15,8 @@
 @interface CIMediaDeviceFinder : NSObject<NSNetServiceBrowserDelegate, NSNetServiceDelegate>{
     NSString *_domain;
     CITableView *_tableView;
-    BOOL _firstRoundDiscovery;
+    NSTimer *_searchTimer;
+    NSUInteger _currentServiceIndex;
 }
 
 @property (nonatomic, strong) NSNetServiceBrowser* scanner;
@@ -24,6 +25,7 @@
 
 - (id) initWithTableView: (CITableView *) tableView;
 - (void) startScan;
+- (void) stopScan;
 - (NSInteger) deviceCount;
 - (NSNetService *) deviceAtIndex: (NSInteger) index;
 

@@ -10,12 +10,16 @@
 #import "CINetService.h"
 #import "CITableView.h"
 #import "NSArray+FileSharingProtocols.h"
+#import "CIApplicationConstants.h"
 #include "arpa/inet.h"
 
 @interface CIMediaDeviceFinder ()
 
+- (NSString *) nextServiceType;
 - (CINetService *) firstServiceToNotBeResolved;
 - (NSArray *) devicesReadyForConnection;
+- (void) startCountDown;
+- (void) stopCountDown;
 
 @end
 
@@ -29,7 +33,7 @@
     self = [super init];
     if (self) {
         _tableView = tableView;
-        _firstRoundDiscovery = YES;
+        _currentServiceIndex = 0;
     }
     return self;
 }
@@ -55,6 +59,9 @@
     //return [[self devicesReadyForConnection] objectAtIndex:index];
     return [servicesReady objectAtIndex:index];
 }
+- (void) stopScan {
+    [scanner stop];
+}
 
 #pragma mark - Private Methods
 
@@ -71,7 +78,25 @@
     NSArray* hold= [servicesFound filteredArrayUsingPredicate:p];
     return hold;
 }
-
+- (NSString *) nextServiceType {
+    NSArray* protocols = [NSArray allProtocols];
+    if (_currentServiceIndex < [protocols count]){
+        return [[NSArray allProtocols] objectAtIndex:_currentServiceIndex++];
+    }
+    return  nil;
+}
+- (void) startCountDown{
+    _searchTimer = [NSTimer scheduledTimerWithTimeInterval:MAX_SERVICE_SEARCH_TIME
+                                                    target:self
+                                                  selector:@selector(stopScan)
+                                                  userInfo:nil
+                                                   repeats:NO];
+}
+- (void) stopCountDown{
+    if ([_searchTimer isValid]){
+        [_searchTimer invalidate];
+    }
+}
 #pragma mark - NSNetServiceBrowserDelegate Methods
 
 - (void) netServiceBrowserWillSearch:(NSNetServiceBrowser *)aNetServiceBrowser{
@@ -87,7 +112,10 @@
     for (NSString*  string in [NSArray allProtocols]){
         NSLog(@"%@", string);
     }
-    [scanner searchForServicesOfType:@"_services._dns-sd._udp." inDomain:_domain];
+    NSString *nextServiceTypeToSearch = [self nextServiceType];
+    NSLog(@"SEARCHING FOR SERVICES OF TYPE %@",  nextServiceTypeToSearch);
+    [scanner searchForServicesOfType:nextServiceTypeToSearch inDomain:_domain];
+    [self startCountDown];
 }
 
 - (void) netServiceBrowser:(NSNetServiceBrowser *)aNetServiceBrowser didRemoveDomain:(NSString *)domainString moreComing:(BOOL)moreComing{
@@ -100,11 +128,17 @@
         servicesFound = [[NSMutableArray alloc] init];
     }
     if (![servicesFound containsObject:netService]){
-        [servicesFound addObject:[[CINetService alloc] initWithService:netService didDiscoverByDomainBrowse:_firstRoundDiscovery]];
+        [self stopCountDown];
+        CINetService* service = [[CINetService alloc] initWithService:netService];
+        [service setRanResolve:YES];
+        [service setDelegate:self];
+        [service resolveWithTimeout:15.0];
+        [servicesFound addObject:service];
+        [self startCountDown];
     }
-    if (moreServicesComing == NO && _firstRoundDiscovery){
+    if (moreServicesComing == NO){
+        [self stopCountDown];
         [scanner stop];
-        _firstRoundDiscovery = NO;
     }
 }
 
@@ -119,22 +153,12 @@
 
 - (void) netServiceBrowserDidStopSearch:(NSNetServiceBrowser *)aNetServiceBrowser{
     NSLog(@"STOPPED SEARCHING");
-    
-    CINetService *service = [self firstServiceToNotBeResolved];
-    if (service){
-        if ([service wasDiscoveredByDomainBrowse]){
-            [servicesFound removeObject:service];
-            NSString* actualServiceType = [NSString stringWithFormat:@"%@.%@", [service name], [[service type] stringByReplacingOccurrencesOfString:@"local." withString:@""]];
-            [scanner searchForServicesOfType:actualServiceType inDomain:_domain];
-        }
-        else if (![service ranResolve]) {
-            while(service){
-                [service setRanResolve:YES];
-                [service setDelegate:self];
-                [service resolveWithTimeout:15.0];
-                service = [self firstServiceToNotBeResolved];
-            }
-        }
+
+    NSString *nextServiceTypeToSearch = [self nextServiceType];
+    if (nextServiceTypeToSearch){
+        NSLog(@"SEARCHING FOR SERVICES OF TYPE %@",  nextServiceTypeToSearch);
+        [scanner searchForServicesOfType:nextServiceTypeToSearch inDomain:_domain];
+        [self startCountDown];
     }
 }
 
