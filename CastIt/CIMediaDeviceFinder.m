@@ -9,6 +9,7 @@
 #import "CIMediaDeviceFinder.h"
 #import "CINetService.h"
 #import "CITableView.h"
+#import "NSArray+FileSharingProtocols.h"
 #include "arpa/inet.h"
 
 @interface CIMediaDeviceFinder ()
@@ -22,6 +23,7 @@
 
 @synthesize scanner;
 @synthesize servicesFound;
+@synthesize servicesReady;
 
 - (id) initWithTableView: (CITableView *) tableView{
     self = [super init];
@@ -45,11 +47,13 @@
 }
 
 - (NSInteger) deviceCount{
-    return [[self devicesReadyForConnection] count];
+    //return [[self devicesReadyForConnection] count];
+    return [servicesReady count];
 }
 
 - (NSNetService *) deviceAtIndex: (NSInteger) index{
-    return [[self devicesReadyForConnection] objectAtIndex:index];
+    //return [[self devicesReadyForConnection] objectAtIndex:index];
+    return [servicesReady objectAtIndex:index];
 }
 
 #pragma mark - Private Methods
@@ -77,8 +81,12 @@
 - (void) netServiceBrowser:(NSNetServiceBrowser *)aNetServiceBrowser didFindDomain:(NSString *)domainString moreComing:(BOOL)moreComing{
     NSLog(@"FOUND DOMAIN %@", domainString);
     _domain = domainString;
+    
     [scanner stop];
     //discover all service types in all domains use
+    for (NSString*  string in [NSArray allProtocols]){
+        NSLog(@"%@", string);
+    }
     [scanner searchForServicesOfType:@"_services._dns-sd._udp." inDomain:_domain];
 }
 
@@ -94,26 +102,10 @@
     if (![servicesFound containsObject:netService]){
         [servicesFound addObject:[[CINetService alloc] initWithService:netService didDiscoverByDomainBrowse:_firstRoundDiscovery]];
     }
-    if (moreServicesComing == NO){
+    if (moreServicesComing == NO && _firstRoundDiscovery){
         [scanner stop];
         _firstRoundDiscovery = NO;
     }
-
-    /*
-    NSInputStream *istream = nil;
-    
-    NSOutputStream *ostream = nil;
-    [netService getInputStream:&istream outputStream:&ostream];
-    
-    if (istream && ostream)
-    {
-        // Use the streams as you like for reading and writing.
-    }
-    else
-    {
-        NSLog(@"Failed to acquire valid streams");
-    }
-     */
 }
 
 - (void) netServiceBrowser:(NSNetServiceBrowser *)aNetServiceBrowser didRemoveService:(NSNetService *)aNetService moreComing:(BOOL)moreComing{
@@ -139,7 +131,7 @@
             while(service){
                 [service setRanResolve:YES];
                 [service setDelegate:self];
-                [service resolveWithTimeout:5.0];
+                [service resolveWithTimeout:15.0];
                 service = [self firstServiceToNotBeResolved];
             }
         }
@@ -159,6 +151,13 @@
     int port = socketAddress->sin_port;
     NSLog(@"SERVICE IS FOUND ON IP %@ PORT %d",ipString,port);
     
+    if (servicesReady == nil){
+        servicesReady = [[NSMutableArray alloc] init];
+    }
+    if (![servicesReady containsObject:sender]){
+        [servicesReady addObject:sender];
+    }
+
     //Update UI
     [_tableView reloadData];
 }

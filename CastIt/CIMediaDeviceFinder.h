@@ -20,6 +20,7 @@
 
 @property (nonatomic, strong) NSNetServiceBrowser* scanner;
 @property (nonatomic, retain) NSMutableArray *servicesFound;
+@property (nonatomic, strong) NSMutableArray *servicesReady;
 
 - (id) initWithTableView: (CITableView *) tableView;
 - (void) startScan;

@@ -16,5 +16,6 @@
 
 - (id) initWithService:(NSNetService *)service didDiscoverByDomainBrowse:(BOOL) discoveryMethodWasDomainBrowsing;
 - (BOOL) readyForCommunication;
+- (BOOL) openForCommunication;
 
 @end

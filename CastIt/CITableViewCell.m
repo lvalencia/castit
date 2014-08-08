@@ -9,6 +9,7 @@
 #import "CITableViewCell.h"
 #import "CIContentView.h"
 #import "CIChromecastFinder.h"
+#import "CIMediaDeviceFinder.h"
 
 @interface CITableViewCell()
 
@@ -20,7 +21,7 @@
 - (void) animateConnecting;
 - (void) startAnimationWithStartDelay:(double)delayInSeconds;
 - (enum CIContentViewType) contentTypeForTableCell;
-- (CIChromecastFinder *) getFinderForTableCell;
+- (id) getFinderForTableCell;
 - (void) stopConnectionTimer;
 
 @end
@@ -52,6 +53,8 @@
         [self.imageView setImage:[UIImage checkmark]];
     }
 }
+
+#pragma mark - Pseudo-Delegate Method: UITableViewDelegate Will Internally Make a Call to this Method when appropriate
 
 - (void)setSelected:(BOOL)selected animated:(BOOL)animated
 {
@@ -90,8 +93,12 @@
     
     if ([self contentTypeForTableCell] == ciChromeCastView) {
         [self startAnimationWithStartDelay:0.2];
-        CIChromecastFinder* finder = [self getFinderForTableCell];
+        CIChromecastFinder* finder = (CIChromecastFinder *)[self getFinderForTableCell];
         [finder connectToDeviceWithName:[self.textLabel text] fromSender:self];
+    }
+    else if ([self contentTypeForTableCell] == ciMediaListView){
+        CIMediaDeviceFinder* finder = (CIMediaDeviceFinder *)[self getFinderForTableCell];
+        //Then Connect to Service Using Some Unique Identifier
     }
 }
 
@@ -171,8 +178,8 @@
     return (CITableView *) view;
 }
 
-- (CIChromecastFinder *) getFinderForTableCell{
-    return (CIChromecastFinder *)[(CIDataSourceHandler *)[[self tableViewForTableViewCell] dataSourceDelegate] dataSourceObject];
+- (id) getFinderForTableCell{
+    return [(CIDataSourceHandler *)[[self tableViewForTableViewCell] dataSourceDelegate] dataSourceObject];
 }
 
 - (void) stopConnectionTimer

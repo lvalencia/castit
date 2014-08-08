@@ -24,4 +24,22 @@
     return ranResolve && successfullyResolved;
 }
 
+- (BOOL) openForCommunication{
+    NSInputStream *istream = nil;
+    
+    NSOutputStream *ostream = nil;
+    [self getInputStream:&istream outputStream:&ostream];
+    
+    if (istream && ostream)
+    {
+        // Use the streams as you like for reading and writing.
+        return YES;
+    }
+    else
+    {
+        NSLog(@"Failed to acquire valid streams");
+        return NO;
+    }
+}
+
 @end
