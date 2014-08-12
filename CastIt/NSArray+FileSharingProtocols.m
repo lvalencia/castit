@@ -12,7 +12,7 @@
 @implementation NSArray (FileSharingProtocols)
 
 + (NSArray *) windowsProtocols {
-    return [NSArray arrayWithObjects:@"_cifs._tcp.", @"_smb._tcp", nil];
+    return [NSArray arrayWithObjects:@"_cifs._tcp.", @"_smb._tcp.", nil];
 }
 + (NSArray *) netwareProtocols{
     return [NSArray arrayWithObjects:@"_ncp._tcp.", nil];
@@ -21,7 +21,7 @@
     return [NSArray arrayWithObjects:@"_nfs._tcp.", @"_nfs._udp.", nil];
 }
 + (NSArray *) macProtocols {
-    return [NSArray arrayWithObjects:@"_afpovertcp._tcp", @"_afp._tcp", nil];
+    return [NSArray arrayWithObjects:@"_afpovertcp._tcp.", @"_afp._tcp.", nil];
 }
 + (NSArray *) allProtocols {
     return [NSArray arrayFromArrays:[self windowsProtocols], [self netwareProtocols], [self nixProtocols], [self macProtocols], nil];
